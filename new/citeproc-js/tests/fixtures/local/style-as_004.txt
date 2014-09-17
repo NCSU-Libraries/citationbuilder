@@ -1,0 +1,40 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry"><span style="font-variant:small-caps;">Suarez</span>, <span style="font-variant:small-caps;">M.</span> 1979. <i>Geología de la región al sur del Canal Beagle, Chile. Carta Geológica de Chile</i>. No. 36, 1:500 000. Santiago: Instituto de Investigaciones Geológicas. [With supplementary text, 48 pp.]</div>
+</div>
+<<===== RESULT===== <<
+
+>>===== CSL =====>>
+antarctic-science.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 14,
+    "type": "map",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "Geología de la región al sur del Canal Beagle, Chile. Carta Geológica de Chile",
+    "publisher": "Instituto de Investigaciones Geológicas",
+    "publisher-place": "Santiago",
+    "event-place": "Santiago",
+    "note": "{:genre: 1:500 000} {:annote: With supplementary text, 48 pp.}",
+	"number": "36",
+	"issued": {
+		"date-parts": [[1979]]
+	},
+    "author": [
+      {
+        "family": "Suarez",
+        "given": "M."
+      }
+    ]
+  }
+]
+<<===== INPUT===== <<

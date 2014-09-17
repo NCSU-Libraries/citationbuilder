@@ -1,0 +1,88 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">Email</div>
+  <div class="csl-entry">Instant message</div>
+  <div class="csl-entry">Letter</div>
+  <div class="csl-entry">Handwritten note</div>
+  <div class="csl-entry">Letter</div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.0">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation>
+    <layout>
+      <text value="NONE"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <choose>
+        <if type="personal_communication"
+            genre="instant-message" match="all">
+          <text term="instant-message" text-case="capitalize-first"/>
+        </if>
+        <else-if type="personal_communication"
+                 genre="email" match="all">
+          <text term="email" text-case="capitalize-first"/>
+        </else-if>
+        <else-if>
+          <conditions match="all">
+            <condition type="personal_communication"/>
+            <condition variable="genre" match="none"/>
+          </conditions>
+          <text term="letter" text-case="capitalize-first"/>
+        </else-if>
+        <else>
+          <text variable="genre" text-case="capitalize-first"/>
+        </else>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "id": "ITEM-1", 
+        "genre": "email",
+        "type": "personal_communication"
+    },
+    {
+        "id": "ITEM-2", 
+        "genre": "instant message",
+        "type": "personal_communication"
+    },
+    {
+        "id": "ITEM-3", 
+        "genre": "letter",
+        "type": "personal_communication"
+    },
+    {
+        "id": "ITEM-4", 
+        "genre": "handwritten note",
+        "type": "personal_communication"
+    },
+    {
+        "id": "ITEM-5", 
+        "type": "personal_communication"
+    }
+]
+<<===== INPUT =====<<

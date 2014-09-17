@@ -1,0 +1,40 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry"><span style="font-variant:small-caps;">Ashford</span>, <span style="font-variant:small-caps;">J.R.</span> 2002. First report of the CCAMLR Otolith Network. <i>SC-CCAMLR-WG-FSA02.51</i>.</div>
+</div>
+<<===== RESULT===== <<
+
+>>===== CSL =====>>
+antarctic-science.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 15,
+    "type": "report",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "First report of the CCAMLR Otolith Network",
+    "number": "SC-CCAMLR-WG-FSA02.51",
+    "author": [
+      {
+        "family": "Ashford",
+        "given": "J. R."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    }
+  }
+]
+<<===== INPUT===== <<

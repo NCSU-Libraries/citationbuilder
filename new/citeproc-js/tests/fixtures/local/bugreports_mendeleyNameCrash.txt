@@ -1,0 +1,46 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+From Carles Pina @ Mendeley
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">
+    <div class="csl-left-margin">[1]</div><div class="csl-right-inline"> P.J.. C.R. Clarkson, <i> Inclusive Design: Design for the Whole Population</i>, 2003.</div>
+  </div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+ieee.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "author": [
+            {
+                "dropping-particle": "",
+                "family": "Clarkson",
+                "given": "P.J., Coleman, R.",
+                "non-dropping-particle": "",
+                "parse-names": false,
+                "suffix": ""
+            }
+        ],
+        "id": "ITEM-1",
+        "issued": {
+            "date-parts": [
+                [
+                    "2003"
+                ]
+            ]
+        },
+        "title": " Inclusive Design: Design for the Whole Population",
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

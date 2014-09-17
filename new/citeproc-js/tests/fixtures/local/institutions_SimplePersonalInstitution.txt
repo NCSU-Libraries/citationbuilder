@@ -1,0 +1,51 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+Roe, Big Ministry
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.1mlz1"
+      default-locale="en">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation
+    et-al-min="3"
+    et-al-use-first="1">
+    <layout>
+      <names variable="author">
+        <name form="short" delimiter=", " and="text"/>
+      </names>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "author": [
+            {
+                "family": "Roe", 
+                "given": "Jane"
+            }, 
+            {
+                "literal": "Big Ministry"
+            }
+        ], 
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

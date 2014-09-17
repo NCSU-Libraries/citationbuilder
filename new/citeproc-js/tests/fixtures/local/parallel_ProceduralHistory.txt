@@ -1,0 +1,120 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+>>[0] West Publishing Co. v. Mead Data Center, Inc., 616 F. Supp. 1571 (D. Minn. 1985), aff’d 799 F.2d 1219 (8th Cir. 1986), cert. denied 479 U.S. 1070 (1986).
+<<===== RESULT =====<<
+
+>>===== ABBREVIATIONS =====>>
+{
+  "us": {
+    "place": {
+      "us;federal;mn": "D. Minn."
+     },
+     "container-title": {
+       "F.2d": "!jurisdiction>>>F.2d",
+       "United States Reports": "!jurisdiction,authority>>>U.S."
+     },
+     "institution-part": {
+       "Court of Appeals for the Eighth Circuit": "8th Cir."
+    }
+  }
+}
+<<===== ABBREVIATIONS =====<<
+
+
+>>===== CITATIONS =====>>
+[
+    [
+        {
+            "citationID": "CITATION-1", 
+            "citationItems": [
+                {
+                    "id": "ITEM-1"
+                }, 
+                {
+                    "id": "ITEM-2",
+                    "prefix": "aff'd"
+                },
+                {
+                    "id": "ITEM-3",
+                    "prefix": "cert. denied"
+                }
+            ], 
+            "properties": {
+                "noteIndex": 1
+            }
+        }, 
+        [], 
+        []
+    ]
+]
+<<===== CITATIONS =====<<
+
+
+>>===== CSL =====>>
+mlz-amlaw.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+	{
+		"id": "ITEM-1",
+		"type": "legal_case",
+		"key": "CWWRANUS",
+		"title": "West Publishing Co. v. Mead Data Center, Inc.",
+		"container-title": "F. Supp.",
+		"page": "1571",
+		"volume": "616",
+		"jurisdiction": "us;federal;mn",
+		"issued": {
+			"date-parts": [
+				[
+					"1985"
+				]
+			]
+		}
+	},
+	{
+		"id": "ITEM-2",
+		"type": "legal_case",
+		"key": "UJPDNN5W",
+		"title": "West Publishing Co. v. Mead Data Center, Inc.",
+		"container-title": "F.2d",
+		"authority": "Court of Appeals for the Eighth Circuit",
+		"page": "1219",
+		"volume": "799",
+		"jurisdiction": "us",
+		"issued": {
+			"date-parts": [
+				[
+					"1986"
+				]
+			]
+		}
+	},
+	{
+		"id": "ITEM-3",
+		"type": "legal_case",
+		"key": "5QNQ6N3H",
+		"title": "West Publishing Co. v. Mead Data Center, Inc.",
+		"container-title": "United States Reports",
+		"page": "1070",
+		"volume": "479",
+		"jurisdiction": "us",
+		"issued": {
+			"date-parts": [
+				[
+					"1986"
+				]
+			]
+		}
+	}
+]
+<<===== INPUT =====<<
+
+

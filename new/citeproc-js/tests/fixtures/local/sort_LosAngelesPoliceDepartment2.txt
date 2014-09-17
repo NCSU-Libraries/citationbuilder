@@ -1,0 +1,81 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+
+This test applies to the following issue:
+
+  http://forums.zotero.org/discussion/18684/sorting-error-insitutional-author/
+
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">Adelberg, S. (1978). <i>Book A</i>.</div>
+  <div class="csl-entry">Argyris, C. (1976). <i>Book C</i>.</div>
+  <div class="csl-entry">Los Angeles Police Department. (2010). <i>Book B</i>.</div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+apa-x.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "author": [
+            {
+                "family": "Adelberg",
+                "given": "Steven"
+            }
+        ], 
+        "id": "ITEM-1", 
+        "issued": {
+            "date-parts": [
+                [
+                    "1978" 
+                ]
+            ]
+        }, 
+        "title": "Book A", 
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "Los Angeles Police Department"
+            }
+        ], 
+        "id": "ITEM-2", 
+        "issued": {
+            "date-parts": [
+                [
+                    "2010" 
+                ]
+            ]
+        }, 
+        "title": "Book B", 
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "Argyris",
+                "given": "Clement"
+            }
+        ], 
+        "id": "ITEM-3", 
+        "issued": {
+            "date-parts": [
+                [
+                    "1976" 
+                ]
+            ]
+        }, 
+        "title": "Book C", 
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

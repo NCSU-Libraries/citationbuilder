@@ -1,0 +1,113 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">Item One.</div>
+  <div class="csl-entry">Item Two!</div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CITATIONS =====>>
+[
+    [
+        {
+            "citationID": "CITATION-1", 
+            "citationItems": [
+                {
+                    "id": "ITEM-1"
+                }, 
+                {
+                    "id": "ITEM-2"
+                }
+            ], 
+            "properties": {
+                "noteIndex": 1
+            }
+        }, 
+        [], 
+        []
+    ],
+    [
+        {
+            "citationID": "CITATION-2", 
+            "citationItems": [
+                {
+                    "id": "ITEM-2"
+                }, 
+                {
+                    "id": "ITEM-1"
+                }
+            ], 
+            "properties": {
+                "noteIndex": 2
+            }
+        }, 
+        [["CITATION-1", 1]], 
+        []
+    ]
+]
+<<===== CITATIONS =====<<
+
+
+>>===== CSL =====>>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" page-range-format="chicago" version="1.1mlz1" year-range-format="expanded">
+  <info>
+    <title>MLZ American Law Style Modified</title>
+    <id>http://citationstylist.org/styles/mlz-amlaw-mod</id>
+    <link href="http://citationstylist.org/uploads/mlz-amlaw" rel="self"/>
+    <link href="https://docs.legis.wisconsin.gov/statutes/statutes/809/II/19/1/e" rel="documentation"/>
+    <author>
+      <name>Frank Bennett</name>
+      <email>biercenator@gmail.com</email>
+    </author>
+    <summary>The style mandated by statute for use in the Wisconsin Court of Appeals
+    in the United States. Courts, legal publishers and other institutions
+    in the United States each have particular citation requirements. This style
+    can be adapted to local rules.
+    </summary>
+    <category field="law"/>
+    <category citation-format="note"/>
+    <updated>2010-04-24T04:49:00+09:00</updated>
+    <rights>This work is licensed under a Creative Commons Attribution-Share Alike 3.0 License: http://creativecommons.org/licenses/by-sa/3.0/</rights>
+  </info>
+  <citation>
+    <layout locale="zh" delimiter="; " suffix="#">
+      <text variable="title"/>
+    </layout>
+    <layout delimiter="; " suffix=".">
+      <text variable="title"/>
+    </layout>
+  </citation>
+  <bibliography et-al-min="3" et-al-use-first="1">
+    <layout locale="zh" suffix="!">
+      <text variable="title"/>
+    </layout>
+    <layout suffix=".">
+      <text variable="title"/>
+    </layout>
+  </bibliography>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "title": "Item One",
+        "id": "ITEM-1", 
+        "type": "book",
+        "language": "en"
+    }, 
+    {
+        "title": "Item Two",
+        "id": "ITEM-2", 
+        "type": "book",
+        "language": "zh"
+    }
+]
+<<===== INPUT =====<<

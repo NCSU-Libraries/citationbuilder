@@ -1,0 +1,36 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+Test by Carles Pina.  Was throwing nesting mismatch
+error to console in citeproc-js.
+
+The "term-join" element is no longer present in citeproc-js,
+as of release 1.0.150, but this test now also checks for
+correct classification of elements with family name only
+and the "isInstitution" flag as institutional authors
+(which should trigger an "and" join, in citeproc-js).
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">test01 and test02,</div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+harvard1.csl
+<<===== CSL =====<<
+
+>>===== INPUT =====>
+[
+	{
+		"id":"ITEM-1",
+		"type":"article-journal",
+		"author":[
+			{"family":"test01","given":"","isInstitution":true},
+			{"family":"test02","given":"","isInstitution":true}
+		]
+	}
+]
+<<====== INPUT =====

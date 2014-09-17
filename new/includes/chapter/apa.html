@@ -1,0 +1,88 @@
+<form class="citation-form" data-csl="apa">
+<hr>
+    <ul class="button-group unstyle-list cite-medium">
+        <li><a class="tiny button disabled active" data-medium="print" href="#">in print</a></li>
+        <li><a class="tiny button disabled" data-medium="online" href="#">online</a></li>
+    </ul>
+    <input type="hidden" name="type" value="webpage" id="form-type" />
+
+    <div id="contributor-container">
+        <div class="row contributor">
+            <div class="columns medium-2 field print online">
+                <label for="author">Contributor
+                    <select name="contributor">
+                        <option value="author">Author</option>
+                        <option value="editor">Editor</option>
+                        <option value="translator">Translator</option>
+                    </select>
+                </label>
+            </div>
+            <div class="columns medium-4 field print online">
+                <label>First Name<input type="text" name="given" /></label>
+            </div>
+            <div class="columns medium-1 field print online">
+                <label>MI<input type="text" name="givenMiddle" /></label>
+            </div>
+            <div class="columns medium-4 last-name field print online">
+                <label>Last Name/Corp.<input type="text" name="family" /></label>
+            </div>
+            <div class="columns medium-1 field print online">
+                <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-1 right">
+            <div id="add-contributor" class=""><small><a href="#"><i class="fa fa-plus-square"></i></a></small></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print online">
+            <label for="title">Chapter/essay title:<input type="text" name="title" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print online">
+            <label for="container-title">Book title:<input type="text" name="container-title" /></label>
+        </div>
+    </div>
+
+    <label for="publisher">Publication info</label>
+    <div class="row">
+        <div class="columns medium-6 field print online">
+            <input type="text" name="publisher" placeholder="publisher" />
+        </div>
+        <div class="columns medium-3 field print online">
+            <label for="location"><input type="text" name="publisher-place" placeholder="location" />
+            </label>
+        </div>
+        <div class="columns medium-3 field print online left">
+            <label for="year"><input type="text" name="year" placeholder="year" />
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-3 field print online">
+            <label for="page">Pages<input type="text" name="page" placeholder="ex: 100-110" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field online">
+            <label for="URL">URL<input type="text" name="URL" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-7 field online">
+            <p>or</p>
+            <label for="DOI">DOI<input type="text" name="DOI" /></label>
+        </div>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>

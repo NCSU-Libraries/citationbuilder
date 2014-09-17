@@ -1,0 +1,32 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+>>===== RESULT =====>>
+(Institution01 and Institution02, 2003)
+<<===== RESULT =====<<
+
+>>===== CSL =====>>
+apa-x.csl
+<<===== CSL =====<<
+
+>>===== INPUT =====>>
+[
+	{
+		"title" : "This is some title",
+		"volume" : "2003",
+		"author": [
+          {
+			"literal" : "Institution01"
+		  },
+          {
+			"literal" : "Institution02"
+		  }
+        ],
+		"issued" : {
+			"date-parts": [
+			[2003,1] ]
+		}
+	}
+]
+<<===== INPUT =====<<

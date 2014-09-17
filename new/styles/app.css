@@ -1,0 +1,86 @@
+/*begin citation style chooser*/
+#citation-chooser{
+    margin-bottom: 40px;
+}
+#cite-text{
+    padding-right: 0px;
+}
+#cite-text p{
+    padding-top: 5px;
+}
+@media only screen and (min-device-width: 768px){
+    #cite-select{
+        padding-left: 0px;
+    }
+    #cite-select select{}
+    #cite-style-text{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #cite-style-select{
+        padding-left: 0px;
+    }
+}
+#cite-style-text p{
+    padding-top: 5px;
+}
+
+
+
+
+/*begin forms*/
+.citation-form{}
+
+.citation-form .button.active.disabled{
+    background: #cc0000;
+    color: #FFF;
+}
+.citation-form .button.disabled{
+    background: #F5f5f5;
+    border-color: #ccc;
+    color: #555;
+}
+@media only screen and (min-device-width: 768px){
+    .last-name{
+        padding-right: 0px;
+    }
+    #add-contributor{
+        position: relative;
+        top: -46px;
+    }
+    #add-contributor a{
+        color: #555;
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-device-width: 768px){
+    #add-contributor{
+        margin-bottom: 30px;
+    }
+    #add-contributor a{
+        color: #555;
+        font-size: 3rem;
+    }
+}
+#add-contributor.active{
+    position: relative;
+    top: 0px;
+}
+@media only screen and (min-device-width: 768px){
+    .remove-contributor{
+        position: relative;
+        top: 28px;
+    }
+}
+.remove-contributor a{
+    color: #555;
+    font-size: 1.5rem;
+}
+@media only screen and (max-device-width: 768px){
+    .remove-contributor{
+        margin-bottom: 30px;
+    }
+    .remove-contributor a{
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,51 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry"><span style="font-variant:small-caps;">Gusev</span>, <span style="font-variant:small-caps;">B.V.</span>, <span style="font-variant:small-caps;">Grikurov</span>, <span style="font-variant:small-caps;">G.E.</span> &#38; <span style="font-variant:small-caps;">Polyakov</span>, <span style="font-variant:small-caps;">M.M.</span> 1972. Paleomagnetizm izverzhennich porod ostrova King Dzhordzh (Antarktika) [Palaeomagnetism of igneous rocks of King George Island (Antarctica)]. <i>Geofizicheskiye Metody Razvedki v Arktike</i>, <b>7</b>, 105–109.</div>
+</div>
+<<===== RESULT===== <<
+
+>>===== CSL =====>>
+antarctic-science.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 8,
+    "type": "article-journal",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "Paleomagnetizm izverzhennich porod ostrova King Dzhordzh (Antarktika) [Palaeomagnetism of igneous rocks of King George Island (Antarctica)]",
+    "container-title": "Geofizicheskiye Metody Razvedki v Arktike",
+    "page": "105-109",
+    "volume": "7",
+    "author": [
+      {
+        "family": "Gusev",
+        "given": "B. V.",
+        "isInstitution": ""
+      },
+      {
+        "family": "Grikurov",
+        "given": "G. E."
+      },
+      {
+        "family": "Polyakov",
+        "given": "M. M."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1972
+        ]
+      ]
+    }
+  }
+]
+<<===== INPUT===== <<
