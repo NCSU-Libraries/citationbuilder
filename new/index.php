@@ -33,11 +33,25 @@
                         <h1>Citation Builder</h1>
 
                         <?php include './includes/citation-select.php'; ?>
-                        <div id="form-container"></div>
-                        <!--?php include './includes/form.php'; ?-->
+                        <div id="form-container">
+                            <?php
+                                $csl_array = array('apa','chicago','cse','mla');
+                                $medium_array = array('book','chapter','magazine','newspaper','article-journal','website');
+                                foreach($medium_array as $med){
+                                    print '<div class="form-parent" id="'.$med.'">';
+                                        foreach($csl_array as $csl){
+                                            print '<div class="form-child '.$csl.'">';
+                                                include './includes/'.$med.'/'.$csl.'.html';
+                                            print '</div>';
+                                        }
+                                    print '</div>';
+                                }
+                            ?>
+                        </div>
 
                         <div id="citation-modal" class="reveal-modal row" data-reveal data-reveal-id="citation-modal">
                             <div id="citation-content"></div>
+                            <!-- <div class="clipboard"><p><i class="fa fa-clipboard"></i> hit ctrl + c to copy to clipboard</p></div> -->
                             <a class="close-reveal-modal">&#215;</a>
                         </div>
 
@@ -46,11 +60,10 @@
                     <aside class="medium-3 columns sidebar">
 
                         <div class="sidebar">
-                            <h2>This is a sidebox (h2)</h2>
+                            <h2>Citation Resources</h2>
                             <ul>
-                                <li><a href="#">That is our most modestly</a></li>
-                                <li><a href="#">priced receptacle</a></li>
-                                <li><a href="#">Malesuada suscipit malesuada</a></li>
+                                <li><a href="/tools-citation">Citation tools</a></li>
+                                <li><a href="/do/reference-management">Citation management</a></li>
                             </ul>
                         </div>
 

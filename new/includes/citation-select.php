@@ -5,7 +5,7 @@
     <div class="columns medium-4" id="cite-select">
         <select name="cite">
             <option value="default">--</option>
-            <option value="book">book (in it's entirety)</option>
+            <option value="book">book (in its entirety)</option>
             <option value="chapter">chapter or essay from a book</option>
             <option value="magazine">magazine article</option>
             <option value="newspaper">newspaper article</option>
@@ -22,7 +22,7 @@
             <option value="apa">APA</option>
             <option value="mla">MLA</option>
             <option value="chicago">Chicago</option>
-            <option value="cse">CSE</option>
+            <option value="cse">CSE/CBE</option>
         </select>
     </div>
 </div>

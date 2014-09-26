@@ -15,6 +15,14 @@ var app = {
         })
 
         app.checkFormOnLoad();
+        app.activateMediumButtons();
+        app.getMedium();
+        app.handleMediumFields();
+        app.setFormType();
+        app.activateContributorButtons();
+        app.handleDatePicker();
+
+        data.init();
 
     },
 
@@ -25,16 +33,14 @@ var app = {
     },
 
     loadForm : function(){
-        $('#form-container').load('includes/'+app.cite+'/'+app.style+'.html', function(){
-            app.activateMediumButtons();
-            app.getMedium();
-            app.handleMediumFields();
-            app.setFormType();
-            app.activateContributorButtons();
-            app.handleDatePicker();
+        $('.form-parent').hide();
+        $('.form-child').hide();
+        $('#'+app.cite).show();
+        $('.'+app.style).show();
 
-            data.init();
-        });
+
+        // $('#form-container').load('includes/'+app.cite+'/'+app.style+'.html', function(){
+        // });
     },
 
     showForm : function(){
@@ -62,11 +68,13 @@ var app = {
     },
 
     getMedium : function(){
-        $('.cite-medium li').each(function(){
-            if($(this).children().hasClass('active')){
-                app.medium = $(this).children().data('medium');
+        $('#'+app.cite+' .'+app.style+' .cite-medium li').each(function(){
+            var elem = $(this).find('a');
+
+            if($(elem).hasClass('active')){
+                app.medium = $(elem).data('medium');
             }
-        })
+        });
     },
 
     handleMediumFields : function(){

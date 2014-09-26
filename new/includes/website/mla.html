@@ -1,1 +1,75 @@
-mla
+<form class="citation-form" data-csl="modern-language-association">
+<hr>
+    <ul class="button-group unstyle-list cite-medium">
+        <li><a class="tiny button disabled active" data-medium="online" href="#">online</a></li>
+    </ul>
+    <input type="hidden" name="type" value="webpage" id="form-type" />
+
+    <div id="contributor-container">
+        <div class="row contributor">
+            <div class="columns medium-2 field print online">
+                <label for="author">Contributor
+                    <select name="contributor">
+                        <option value="author">Author</option>
+                        <option value="editor">Editor</option>
+                        <option value="translator">Translator</option>
+                    </select>
+                </label>
+            </div>
+            <div class="columns medium-4 field print online">
+                <label>First Name<input type="text" name="given" /></label>
+            </div>
+            <div class="columns medium-1 field print online">
+                <label>MI<input type="text" name="givenMiddle" /></label>
+            </div>
+            <div class="columns medium-4 last-name field print online">
+                <label>Last Name/Corp.<input type="text" name="family" /></label>
+            </div>
+            <div class="columns medium-1 field print online">
+                <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-1 right">
+            <div id="add-contributor" class=""><small><a href="#"><i class="fa fa-plus-square"></i></a></small></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print online">
+            <label for="title">Article Title<input type="text" name="title" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print online">
+            <label for="container-title">Website Title<input type="text" name="container-title" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field online">
+            <label for="URL">URL<input type="text" name="URL" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-6 field print online">
+            <label for="publisher">Site publisher/sponsor<input type="text" name="publisher" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-4 field print online">
+            <label for="issued">Electronically published<input type="text" name="issued" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+        </div>
+
+        <div class="columns medium-4 field online left">
+            <label for="accessed">Date accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+        </div>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>

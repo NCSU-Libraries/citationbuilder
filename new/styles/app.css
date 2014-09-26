@@ -29,7 +29,15 @@
 
 
 /*begin forms*/
+.form-parent,
+.form-child{
+    display: none;
+}
 .citation-form{}
+
+.citation-form select{
+    margin-bottom: 1rem;
+}
 
 .citation-form .button.active.disabled{
     background: #cc0000;
@@ -83,4 +91,40 @@
     .remove-contributor a{
         font-size: 3rem;
     }
+}
+
+.clipboard{
+    margin-top: 20px;
+}
+.clipboard p{
+    font-size: 0.7rem;
+}
+
+@media only screen and (min-device-width: 768px){
+    #citation-modal.reveal-modal{
+        left: 0px;
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .csl-entry{
+        line-height: 1.4rem;
+    }
+}
+
+@media only screen and (max-device-width: 768px){
+    #citation-modal.reveal-modal{
+        left: 0px;
+        height: auto;
+        margin-left: 5%;
+        min-height: 1px;
+        width: 90%;
+    }
+
+    .csl-entry{
+        line-height: 1.4rem;
+        width: 90%;
+    }
+
+    input[type='text'],input[type='number'],textarea, select {font-size:16px !important;}
 }

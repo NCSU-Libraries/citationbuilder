@@ -1,1 +1,61 @@
-apa
+<form class="citation-form" data-csl="apa">
+<hr>
+    <ul class="button-group unstyle-list cite-medium">
+        <li><a class="tiny button disabled active" data-medium="online" href="#">online</a></li>
+    </ul>
+    <input type="hidden" name="type" value="webpage" id="form-type" />
+
+    <div id="contributor-container">
+        <div class="row contributor">
+            <div class="columns medium-2 field online">
+                <label for="author">Contributor
+                    <select name="contributor">
+                        <option value="author">Author</option>
+                        <option value="editor">Editor</option>
+                        <option value="translator">Translator</option>
+                    </select>
+                </label>
+            </div>
+            <div class="columns medium-4 field online">
+                <label>First Name<input type="text" name="given" /></label>
+            </div>
+            <div class="columns medium-1 field online">
+                <label>MI<input type="text" name="givenMiddle" /></label>
+            </div>
+            <div class="columns medium-4 last-name field online">
+                <label>Last Name/Corp.<input type="text" name="family" /></label>
+            </div>
+            <div class="columns medium-1 field online">
+                <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-1 right">
+            <div id="add-contributor" class=""><small><a href="#"><i class="fa fa-plus-square"></i></a></small></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field online">
+            <label for="title">Title<input type="text" name="title" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field online">
+            <label for="URL">URL<input type="text" name="URL" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-3 field online">
+            <label for="issued">Electronically published<input type="text" name="issued" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+        </div>
+    </div>
+
+
+
+    <input type="submit" value="Submit">
+</form>

@@ -25,7 +25,7 @@ var data = {
         var contribAry = [];
 
         // collect contributor data
-        $('.contributor').each(function(i){
+        $('.contributor:visible').each(function(i){
             var contrib = $(this).find('select[name*="contributor"]').val();
             var given = $(this).find('input[name*="given"]').val();
             var middle = $(this).find('input[name*="givenMiddle"]').val();
@@ -48,9 +48,9 @@ var data = {
                 // an exception for dates
                 json['Item-1'][name] = val;
                 if(name == 'year'){json['Item-1']['issued'] = {'date-parts' : [[val]]};}
-                if(name == 'accessed'){
+                if(name == 'accessed' ||  name == 'issued'){
                     var str = val.split('-');
-                    json['Item-1']['accessed'] = {'date-parts' : [[str[2],str[1],str[0]]]};
+                    json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
                 }
             }
         }
@@ -61,7 +61,7 @@ var data = {
 
 $(function(){
     $('.citation-form').submit(function(e){
-        data.init(e.currentTarget);
+        data.init();
         e.preventDefault();
     })
 })
