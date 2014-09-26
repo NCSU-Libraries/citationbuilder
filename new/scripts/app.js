@@ -1,5 +1,5 @@
 var app = {
-    cite : '',style : '',
+    cite : '',style : '',form : '',
 
     init : function(){
         //citation select
@@ -37,10 +37,12 @@ var app = {
         $('.form-child').hide();
         $('#'+app.cite).show();
         $('.'+app.style).show();
+        app.form = '#'+app.cite+' .'+app.style;
 
+        app.activateMediumButtons();
+        app.getMedium();
+        app.handleMediumFields();
 
-        // $('#form-container').load('includes/'+app.cite+'/'+app.style+'.html', function(){
-        // });
     },
 
     showForm : function(){
@@ -57,8 +59,8 @@ var app = {
 
     activateMediumButtons : function(){
         //citation medium
-        $('.cite-medium li a').click(function(e){
-            $('.cite-medium li a').removeClass('active');
+        $('#'+app.cite+' .'+app.style+' .cite-medium li a').click(function(e){
+            $('#'+app.cite+' .'+app.style+' .cite-medium li a').removeClass('active');
             $(this).addClass('active');
             app.medium = $(this).data('medium');
             app.handleMediumFields();
@@ -75,6 +77,7 @@ var app = {
                 app.medium = $(elem).data('medium');
             }
         });
+
     },
 
     handleMediumFields : function(){
@@ -83,7 +86,7 @@ var app = {
     },
 
     activateContributorButtons : function(){
-        $('#add-contributor a').click(function(e){
+        $('.add-contributor a').click(function(e){
             app.addContributor();
 
             e.preventDefault();
@@ -93,7 +96,7 @@ var app = {
     },
 
     addContributor : function(){
-        $('#contributor-container').append($('.contributor')[0].outerHTML);
+        $(app.form+' .contributor-container').append($('.contributor')[0].outerHTML);
 
         $('.remove-contributor a').click(function(e){
             app.removeContributor($(this));
@@ -113,10 +116,10 @@ var app = {
     countContributor : function(){
         if($('.remove-contributor').length < 2){
             $('.remove-contributor').hide();
-            $('#add-contributor').removeClass('active');
+            $('.add-contributor').removeClass('active');
         } else{
             $('.remove-contributor').show();
-            $('#add-contributor').addClass('active');
+            $('.add-contributor').addClass('active');
         }
     },
 

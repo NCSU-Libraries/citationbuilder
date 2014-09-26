@@ -52,25 +52,25 @@
     .last-name{
         padding-right: 0px;
     }
-    #add-contributor{
+    .add-contributor{
         position: relative;
         top: -46px;
     }
-    #add-contributor a{
+    .add-contributor a{
         color: #555;
         font-size: 1.5rem;
     }
 }
 @media only screen and (max-device-width: 768px){
-    #add-contributor{
+    .add-contributor{
         margin-bottom: 30px;
     }
-    #add-contributor a{
+    .add-contributor a{
         color: #555;
         font-size: 3rem;
     }
 }
-#add-contributor.active{
+.add-contributor.active{
     position: relative;
     top: 0px;
 }
