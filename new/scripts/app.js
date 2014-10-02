@@ -129,12 +129,14 @@ var app = {
         var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
         $(app.form+' .fdatepicker').click(function(e){
-            $(app.form+' .fdatepicker').fdatepicker({
+            // $(app.form+' .fdatepicker').fdatepicker({
+            $(this).fdatepicker({
                 onRender: function (date) {
                     return date.valueOf() > now.valueOf() ? 'disabled' : '';
                 }
             });
-            $(app.form+' .fdatepicker').fdatepicker('show');
+            // $(app.form+' .fdatepicker').fdatepicker('show');
+            $(this).fdatepicker('show');
         })
     }
 }
