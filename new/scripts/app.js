@@ -42,6 +42,7 @@ var app = {
         app.activateMediumButtons();
         app.getMedium();
         app.handleMediumFields();
+        app.handleDatePicker();
 
     },
 
@@ -127,13 +128,13 @@ var app = {
         var nowTemp = new Date();
         var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
-        $('.fdatepicker').click(function(e){
-            $('.fdatepicker').fdatepicker({
+        $(app.form+' .fdatepicker').click(function(e){
+            $(app.form+' .fdatepicker').fdatepicker({
                 onRender: function (date) {
                     return date.valueOf() > now.valueOf() ? 'disabled' : '';
                 }
             });
-            $('.fdatepicker').fdatepicker('place');
+            $(app.form+' .fdatepicker').fdatepicker('show');
         })
     }
 }
