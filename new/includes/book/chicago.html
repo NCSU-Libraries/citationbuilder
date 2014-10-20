@@ -1,15 +1,14 @@
 <form class="citation-form" data-csl="chicago-author-date">
 <hr>
     <ul class="button-group unstyle-list cite-medium">
-        <li><a class="tiny button disabled active" data-medium="print" href="#">in print</a></li>
-        <li><a class="tiny button disabled" data-medium="online" href="#">online</a></li>
-        <li><a class="tiny button disabled" data-medium="download" href="#">download</a></li>
+        <li><a class="tiny button disabled active" data-medium="print" href="#">print</a></li>
+        <li><a class="tiny button disabled" data-medium="digital" href="#">digital</a></li>
     </ul>
     <input type="hidden" name="type" value="webpage" id="form-type" />
 
     <div class="contributor-container">
         <div class="row contributor">
-            <div class="columns medium-2 field print online download">
+            <div class="columns medium-2 field print digital">
                 <label for="author">Contributor
                     <select name="contributor">
                         <option value="author">Author</option>
@@ -18,16 +17,16 @@
                     </select>
                 </label>
             </div>
-            <div class="columns medium-4 field print online download">
+            <div class="columns medium-4 field print digital">
                 <label>First Name<input type="text" name="given" /></label>
             </div>
-            <div class="columns medium-1 field print online download">
+            <div class="columns medium-1 field print digital">
                 <label>MI<input type="text" name="givenMiddle" /></label>
             </div>
-            <div class="columns medium-4 last-name field print online download">
+            <div class="columns medium-4 last-name field print digital">
                 <label>Last Name/Corp.<input type="text" name="family" /></label>
             </div>
-            <div class="columns medium-1 field print online download">
+            <div class="columns medium-1 field print digital">
                 <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
             </div>
         </div>
@@ -40,50 +39,50 @@
     </div>
 
     <div class="row">
-        <div class="columns medium-12 field print online download">
+        <div class="columns medium-12 field print digital">
             <label for="title">Title<input type="text" name="title" /></label>
         </div>
     </div>
 
     <div class="row">
-        <div class="columns medium-12 field print online download">
+        <div class="columns medium-12 field print digital">
             <label for="series">Series Title<input type="text" name="series" /></label>
         </div>
     </div>
 
     <div class="row">
-        <div class="columns medium-2 field print online download">
+        <div class="columns medium-2 field print digital">
             <label for="edition">Edition<input type="text" name="edition" placeholder="(ex: 2nd)" /></label>
         </div>
 
-        <div class="columns medium-2 left field print online download">
+        <div class="columns medium-2 left field print digital">
             <label for="volume">Volume<input type="text" name="volume" /></label>
         </div>
     </div>
 
     <label for="publisher">Publication info</label>
     <div class="row">
-        <div class="columns medium-6 field print download">
+        <div class="columns medium-6 field print digital">
             <input type="text" name="publisher" placeholder="publisher" />
         </div>
-        <div class="columns medium-3 field print download">
+        <div class="columns medium-3 field print digital">
             <label for="location"><input type="text" name="publisher-place" placeholder="location" /></label>
         </div>
-        <div class="columns medium-3 field print online left download">
+        <div class="columns medium-3 field print digital left digital">
             <label for="year"><input type="text" name="year" placeholder="year" /></label>
         </div>
     </div>
 
-    <label for="URL" class="field online">URL</label>
-    <label for="URL" class="field download">Type of eBook</label>
+    <label for="URL" class="field digital">URL</label>
+    <label for="URL" class="field digital">Type of eBook</label>
     <div class="row">
-        <div class="columns medium-12 field online download">
+        <div class="columns medium-12 field digital">
             <input type="text" name="URL" />
         </div>
     </div>
 
     <div class="row">
-        <div class="columns medium-7 field online">
+        <div class="columns medium-7 field digital">
             <p>or</p>
             <label for="DOI">DOI<input type="text" name="DOI" /></label>
         </div>

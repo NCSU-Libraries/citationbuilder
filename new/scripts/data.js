@@ -45,12 +45,19 @@ var data = {
             var name = data.formData[obj].name, val = data.formData[obj].value;
 
             if($('input[name*="'+name+'"]').parent().is(':visible')){
-                // an exception for dates
+                // exception for fields who have mult values that need to be consolidated
                 json['Item-1'][name] = val;
                 if(name == 'year'){json['Item-1']['issued'] = {'date-parts' : [[val]]};}
                 if(name == 'accessed' ||  name == 'issued'){
                     var str = val.split('-');
                     json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
+                }
+                // month/year inputs
+                if(name == 'issued-month' || name == 'issued-year'){
+                    var month = $('select[name*="issued-month"]').val();
+                    var year = $('input[name*="issued-year"]').val();
+                    json['Item-1']['issued'] = {'date-parts' : [[year,month]]};
+                    console.log(year,month);
                 }
             }
         }

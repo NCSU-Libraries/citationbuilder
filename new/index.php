@@ -11,7 +11,6 @@
     <script type="text/javascript" src="./citeproc-js/xmldom.js"></script>
     <script type="text/javascript" src="./citeproc-js/citeproc.js"></script>
     <script src="scripts/citation.js"></script>
-    <script src="scripts/fields.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/data.js"></script>
     <link rel="stylesheet" href="styles/app.css" />
@@ -57,6 +56,7 @@
 
                     </div>
 
+
                     <aside class="medium-3 columns sidebar">
 
                         <div class="sidebar">
@@ -68,7 +68,6 @@
                         </div>
 
                     </aside>
-
 
                     <!--- end content -->
                 </main>
