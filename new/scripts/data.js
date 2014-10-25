@@ -1,6 +1,8 @@
 var data = {
 
     init: function(){
+        var activeForm = $('select[name*="citation-style"]').val();
+
         $('.citation-form').submit(function(e){
             data.activateForm(e.currentTarget);
             e.preventDefault();
@@ -32,11 +34,14 @@ var data = {
             var last = $(this).find('input[name*="family"]').val();
 
             //build contributor object
-            if(contribAry.indexOf(contrib)){
-                json['Item-1'][contrib] = [{'given':given+' '+middle, 'family':last}];
-            } else{
-                json['Item-1'][contrib].push({'given':given+' '+middle, 'family':last});
+            if(given + middle + last != ''){
+                if(contribAry.indexOf(contrib)){
+                    json['Item-1'][contrib] = [{'given':given+' '+middle, 'family':last}];
+                } else{
+                    json['Item-1'][contrib].push({'given':given+' '+middle, 'family':last});
+                }
             }
+
             contribAry.push(contrib);
         })
 
@@ -44,20 +49,21 @@ var data = {
             json['Item-1']['id'] = 'Item-1';
             var name = data.formData[obj].name, val = data.formData[obj].value;
 
-            if($('input[name*="'+name+'"]').parent().is(':visible')){
-                // exception for fields who have mult values that need to be consolidated
+            if($('input[name*="'+name+'"]').parent().is(':visible') || $('select[name*="'+name+'"]').parent().is(':visible')){
                 json['Item-1'][name] = val;
+
+                // exception for fields who have mult values that need to be consolidated
                 if(name == 'year'){json['Item-1']['issued'] = {'date-parts' : [[val]]};}
                 if(name == 'accessed' ||  name == 'issued'){
                     var str = val.split('-');
                     json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
                 }
+
                 // month/year inputs
                 if(name == 'issued-month' || name == 'issued-year'){
-                    var month = $('select[name*="issued-month"]').val();
-                    var year = $('input[name*="issued-year"]').val();
+                    var month = $(data.form).find('select[name*="issued-month"]').val();
+                    var year = $(data.form).find('input[name*="issued-year"]').val();
                     json['Item-1']['issued'] = {'date-parts' : [[year,month]]};
-                    console.log(year,month);
                 }
             }
         }
@@ -67,8 +73,5 @@ var data = {
 }
 
 $(function(){
-    $('.citation-form').submit(function(e){
-        data.init();
-        e.preventDefault();
-    })
+    data.init();
 })

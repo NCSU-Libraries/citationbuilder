@@ -19,10 +19,10 @@
     <div class="columns medium-4" id="cite-style-select">
         <select name="citation-style">
             <option value="default">--</option>
-            <option value="apa">APA</option>
-            <option value="mla">MLA</option>
-            <option value="chicago">Chicago</option>
-            <option value="cse">CSE/CBE</option>
+            <option value="apa">APA 6</option>
+            <option value="mla">MLA 7</option>
+            <option value="chicago">Chicago (author-date)</option>
+            <option value="cse">CSE/CBE (author-date)</option>
         </select>
     </div>
 </div>

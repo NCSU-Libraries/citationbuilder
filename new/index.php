@@ -46,14 +46,14 @@
                                     print '</div>';
                                 }
                             ?>
+                            <p><a href="#" id="clear-form"><small>Clear form</small></a></p>
+
                         </div>
 
                         <div id="citation-modal" class="reveal-modal row" data-reveal data-reveal-id="citation-modal">
                             <div id="citation-content"></div>
-                            <!-- <div class="clipboard"><p><i class="fa fa-clipboard"></i> hit ctrl + c to copy to clipboard</p></div> -->
                             <a class="close-reveal-modal">&#215;</a>
                         </div>
-
                     </div>
 
 

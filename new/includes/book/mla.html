@@ -74,8 +74,32 @@
     </div>
 
     <div class="row">
-        <div class="columns medium-3 field digital">
-            <label for="accessed">Date published<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+<!--         <div class="columns medium-3 field print digital">
+            <label for="issued-month">Date published
+                <select name="issued-month">
+                    <option value="">month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </label>
+        </div> -->
+        <div class="columns medium-3 field print digital left">
+            <label for="issued-year">Date published
+                <input type="text" name="issued-year" placeholder="yyyy" class="columns medium-6"/>
+            </label>
+        </div>
+        <div class="columns medium-3 field digital left">
+            <label for="accessed">Date accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
         </div>
     </div>
 

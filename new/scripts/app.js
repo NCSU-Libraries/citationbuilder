@@ -22,7 +22,36 @@ var app = {
         app.activateContributorButtons();
         app.handleDatePicker();
 
-        data.init();
+        // add clear form button
+
+
+        $('#clear-form').click(function(e){
+            var form = $('form.citation-form[data-csl="'+app.style+'"]:visible *');
+            $(form).each(function(){
+                var type = $(this).attr('type');
+                var tag = $(this).prop('tagName');
+
+                if(type == 'text'){
+                    $(this).val('');
+                }
+
+                if(tag == 'SELECT'){
+                    $(this)[0].selectedIndex = 0;
+                }
+
+                // remove added contributors
+                if($(this).hasClass('contributor-container')){
+                    $(this).find('div.row.contributor').each(function(i){
+                        if(i > 0){
+                            $(this).remove();
+                        }
+                    })
+                }
+
+            });
+
+            e.preventDefault();
+        })
 
     },
 
