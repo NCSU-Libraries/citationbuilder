@@ -1,0 +1,107 @@
+>>== MODE ==>>
+citation
+<<== MODE ==<<
+
+>>===== CITATION-ITEMS =====>>
+[
+    [
+        {
+            "id": "ITEM-1"
+        },
+        {
+            "id": "ITEM-2"
+        }
+    ]
+]
+<<===== CITATION-ITEMS =====<<
+
+The result string is a mess, but it confirms that things are working.
+
+(1) The two cites should collapse by omitting the author and title from the second cite; and
+(2) The "translation" should be omitted on the second cite.
+(3) Italics should be suppressed on the non-romaneque title.
+
+NOTE: This test has been rolled back to doing transliteration only on
+the container-title variable. The more demanding test case described
+above (with orig as main, and translit as variant) is not represented
+here because of limitations in the test suite (and lack of time and
+incentive to fix it). The test did run as described before the
+reversion though, like this:
+
+林秀弥, 競争法における関連市場の画定基準, 126 <span style="font-variant:small-caps;">民商法雑誌</span> <span style="font-variant:small-caps;">Minsho ho zasshi</span>, no. 1, at 23, 126 <span style="font-variant:small-caps;">民商法雑誌</span>, no. 2, 2002, at 56.
+
+
+
+>>== RESULT ==>>
+林秀弥, 競争法における関連市場の画定基準, 126 <span style="font-variant:small-caps;">Minsho ho zasshi</span>, no. 1, at 23, 126 <span style="font-variant:small-caps;">Minsho ho zasshi</span>, no. 2, 2002, at 56.
+<<== RESULT ==<<
+
+>>===== CSL =====>>
+mlz-amlaw.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+   {
+      "id": "ITEM-1",
+      "type": "article-magazine",
+      "key": "G3A88SIZ",
+      "title": "競争法における関連市場の画定基準",
+      "container-title": "民商法雑誌",
+      "page": "23-44",
+      "volume": "126",
+      "issue": "1",
+      "author": [
+         {
+            "family": "林",
+            "given": "秀弥"
+         }
+      ],
+      "issued": {
+         "date-parts": [
+            [
+               2002
+            ]
+         ]
+      },
+      "multi":{
+			"_keys":{
+				"container-title":{
+					"ja-alalc97":"Minsho ho zasshi"
+				}
+			}
+	  }
+   },
+   {
+      "id": "ITEM-2",
+      "type": "article-magazine",
+      "key": "46TEXRZ7",
+      "title": "競争法における関連市場の画定基準",
+      "container-title": "民商法雑誌",
+      "page": "56-72",
+      "volume": "126",
+      "issue": "2",
+      "author": [
+         {
+            "family": "林",
+            "given": "秀弥"
+         }
+      ],
+      "issued": {
+         "date-parts": [
+            [
+               2002
+            ]
+         ]
+      },
+      "multi":{
+			"_keys":{
+				"container-title":{
+					"ja-alalc97":"Minsho ho zasshi"
+				}
+			}
+	  }
+   }
+]
+<<===== INPUT =====<<

@@ -804,19 +804,31 @@ CSL.Output.Queue.adjust = function (punctInQuote) {
     }
     
     function matchLastChar(blob, chr) {
-        if (blob.strings.suffix.slice(0, 1) === chr) {
-            return true;
-        } else if ("string" === typeof blob.blobs) {
+        if (!PUNCT[chr]) {
+            return false;
+        }
+        if ("string" === typeof blob.blobs) {
+
             if (blob.blobs.slice(-1) === chr) {
                 return true;
             } else {
                 return false;
             }
+        } else {
+            var child = blob.blobs[blob.blobs.length-1];
+            if (child) {
+                var childChar = child.strings.suffix.slice(-1);
+                if (!childChar) {
+                    return matchLastChar(child,chr);
+                } else if (child.strings.suffix.slice(-1) == chr) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
         }
-        for (var i=0,ilen=blob.blobs.length;i<ilen;i++) {
-            if (matchLastChar(blob.blobs[i])) return true;
-        }
-        return false;
     };
     
     function mergeChars (First, first, Second, second, merge_right) {
@@ -878,13 +890,21 @@ CSL.Output.Queue.adjust = function (punctInQuote) {
             }
         }
     };
-    
+
     function upward (parent) {
         //print("START2");
         // Terminus if no blobs
-        if ("object" !== typeof parent || "object" !== typeof parent.blobs || !parent.blobs.length) {
+        if (parent.blobs && "string" == typeof parent.blobs) {
+            if (PUNCT[parent.strings.suffix.slice(0,1)]
+                && parent.strings.suffix.slice(0,1) === parent.blobs.slice(-1)) {
+
+                parent.strings.suffix = parent.strings.suffix.slice(1);
+            }
+            return;
+        } else if ("object" !== typeof parent || "object" !== typeof parent.blobs || !parent.blobs.length) {
             return;
         }
+
         // back-to-front, bottom-first
         var parentDecorations = blobHasDecorations(parent,true);
         for (var i=parent.blobs.length-1;i>-1;i--) {
@@ -970,10 +990,17 @@ CSL.Output.Queue.adjust = function (punctInQuote) {
         }
     };
 
-    function downward (parent) {
+    function downward (parent, top) {
         //print("START3");
         // Terminus if no blobs
-        if ("object" !== typeof parent || "object" !== typeof parent.blobs || !parent.blobs.length) {
+        if (parent.blobs && "string" == typeof parent.blobs) {
+            if (PUNCT[parent.strings.suffix.slice(0,1)]
+                && parent.strings.suffix.slice(0,1) === parent.blobs.slice(-1)) {
+
+                parent.strings.suffix = parent.strings.suffix.slice(1);
+            }
+            return;
+        } else if ("object" !== typeof parent || "object" !== typeof parent.blobs || !parent.blobs.length) {
             return;
         }
         var parentStrings = parent.strings;
@@ -1016,16 +1043,15 @@ CSL.Output.Queue.adjust = function (punctInQuote) {
                         if (PUNCT[parentChar]) {
                             if (!blobEndsInNumber(child)) {
                                 mergeChars(child, 'suffix', parent, 'suffix');
+                                if (parentStrings.suffix.slice(0,1) === ".") {
+                                    childStrings.suffix += parentStrings.suffix.slice(0,1);
+                                    parentStrings.suffix = parentStrings.suffix.slice(1);
+                                }
                             }
                         }
                         if (childStrings.suffix.slice(-1) === " " && parentStrings.suffix.slice(0,1)) {
                             parentStrings.suffix = parentStrings.suffix.slice(1);
                         }
-                    } else {
-                        // If we have decorations and there are no quotes below, stop here, but drill down to see if there is duplicate punctuation below
-                        if (matchLastChar(child,parent.strings.suffix.slice(0,1))) {
-                            parent.strings.suffix = parent.strings.suffix.slice(1);
-                        }   
                     }
                     // More duplicates control
                     if (PUNCT_OR_SPACE[childStrings.suffix.slice(0,1)]) {
@@ -1037,9 +1063,13 @@ CSL.Output.Queue.adjust = function (punctInQuote) {
                         }
                         if (childStrings.suffix.slice(-1) === parentStrings.suffix.slice(0, 1)) {
                             // Remove duplicate punctuation on child suffix
-                            childStrings.suffix = childStrings.suffix.slice(0, -1);
+                            parentStrings.suffix = parentStrings.suffix.slice(0, -1);
                         }
                     }
+                }
+                // Squash dupes
+                if (matchLastChar(parent,parent.strings.suffix.slice(0,1))) {
+                    parent.strings.suffix = parent.strings.suffix.slice(1);
                 }
             } else if (parentStrings.delimiter) {
                 // Remove trailing space on mid-position child node suffix if there is a leading space on delimiter above
@@ -1068,6 +1098,21 @@ CSL.Output.Queue.adjust = function (punctInQuote) {
             }
             this.downward(parent.blobs[i]);
         }
+        /*
+        if (top) {
+
+            var seen = [];
+            print(JSON.stringify(parent, function(key, val) {
+                if (!val || key === 'alldecor') return;
+                if (typeof val == "object") {
+                    if (seen.indexOf(val) >= 0)
+                        return
+                    seen.push(val)
+                }
+                return val
+            },2));
+        }
+        */
         //print("  end");
     };
 

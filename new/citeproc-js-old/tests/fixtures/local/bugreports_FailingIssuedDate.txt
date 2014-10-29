@@ -1,0 +1,64 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+Decision of the 最高裁判所, 平成 20 (受) 1207, February 17, 2009.
+<<===== RESULT =====<<
+
+>>===== CSL =====>>
+mlz-cms-full-2.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+	{
+		"id": "ITEM-1",
+		"type": "legal_case",
+		"multi": {
+			"main": {},
+			"_keys": {
+				"authority": {
+					"en": "Supreme Court"
+				}
+			}
+		},
+		"system_id": "1153698_G8ZZAWS8",
+		"genre": "平成",
+		"abstract": "Claim for declaration of shareholder’s rights, etc., claim for entry of a name change in the shareholders’ register, etc., claim for declaration of shareholding, etc.",
+		"URL": "http://www.tomeika.jur.kyushu-u.ac.jp/result.php?s=c0460d9136e2e953ba98b104b65333ca&c=0d77e8610fd7be75d2095e03af8f4752",
+		"call-number": "受",
+		"number": "1207",
+		"language": "ja",
+		"jurisdiction": "jp",
+		"authority": [
+			{
+				"family": "最高裁判所",
+				"given": "",
+				"isInstitution": 1,
+				"multi": {
+					"_key": {
+						"en": {
+							"family": "Supreme Court",
+							"given": "",
+							"isInstitution": 1
+						}
+					}
+				}
+			}
+		],
+		"issued": {
+			"raw": "2009-02-17"
+		},
+		"submitted": {
+			"raw": "20"
+		},
+		"accessed": {
+			"raw": "2013-02-16 10:10:56"
+		}
+	}
+]
+<<===== INPUT =====<<

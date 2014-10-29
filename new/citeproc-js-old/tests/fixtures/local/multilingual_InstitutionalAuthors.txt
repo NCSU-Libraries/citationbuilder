@@ -1,0 +1,119 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+Huang Huaixin 黄懷信, Tian Xudong 田旭東, Zhang Maorong 張懋鎔
+<<===== RESULT =====<<
+
+>>===== LANGPARAMS =====>>
+{
+    "persons":["translit","orig"],
+    "institutions":["translit","orig"],
+    "titles":["orig","translit"],
+    "publishers":["translat"],
+    "places":["translat"]
+}
+<<===== LANGPARAMS =====<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.1mlz1"
+      default-locale="en-US-x-translit-zh-alalc97">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation>
+    <layout>
+      <names variable="editor">
+        <name/>
+      </names>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+	{
+		"id": 13533,
+		"type": "book",
+		"multi": {
+			"main": {
+				"title": "en"
+			},
+			"_keys": {
+				"title": {
+					"zh-alalc97": "Yi Zhou shu huijiao jizhu"
+				}
+			}
+		},
+		"system_id": "0_KZA7RD9N",
+		"title": "逸周書彙校集注",
+		"publisher": "Shanghai guji",
+		"publisher-place": "Shanghai",
+		"event-place": "Shanghai",
+		"archive-place": "Shanghai",
+		"ISBN": "9787532543915",
+		"shortTitle": "Huijiao jizhu",
+		"editor": [
+			{
+				"family": "黄懷信",
+				"given": "",
+				"isInstitution": 1,
+				"multi": {
+					"_key": {
+						"zh-alalc97": {
+							"family": "Huang Huaixin",
+							"given": "",
+							"isInstitution": 1
+						}
+					},
+					"main": "zh"
+				}
+			},
+			{
+				"family": "田旭東",
+				"given": "",
+				"isInstitution": 1,
+				"multi": {
+					"_key": {
+						"zh-alalc97": {
+							"family": "Tian Xudong",
+							"given": "",
+							"isInstitution": 1
+						}
+					},
+					"main": "zh"
+				}
+			},
+			{
+				"family": "張懋鎔",
+				"given": "",
+				"isInstitution": 1,
+				"multi": {
+					"_key": {
+						"zh-alalc97": {
+							"family": "Zhang Maorong",
+							"given": "",
+							"isInstitution": 1
+						}
+					},
+					"main": "zh"
+				}
+			}
+		],
+		"issued": {
+			"raw": "2007"
+		}
+	}
+]
+<<===== INPUT =====<<

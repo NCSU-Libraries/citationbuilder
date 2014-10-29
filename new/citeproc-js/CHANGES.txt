@@ -1,6 +1,58 @@
 Summary of changes to citeproc-js since version 1.0.0 release.
 
 ==========================
+Changes in version 1.0.543
+==========================
+
+- Fix potential crash in util_flipflop.js on weird spaced-off
+  straight single quote marks. Fault reported by Carles Pina.
+  https://bitbucket.org/fbennett/citeproc-js/src/tip/tests/fixtures/local/bugreports_MendeleyApostrophe.txt
+  Thanks to Carles also for the long wait in clearing this one -
+  it took awhile.
+
+==========================
+Changes in version 1.0.542
+==========================
+
+- Fix duplicate punctuation caused by initialized names with
+  leading punctuation on suffix separated by styling
+  decoration at arbitrary level. Thanks to Sebastian
+  Karcher for reporting:
+
+    https://twitter.com/adam42smith/status/515321387062284288
+
+==========================
+Changes in version 1.0.541
+==========================
+
+- Fix prefix-cite interspace handling (was erroneously adding
+  space on almost all non-alpha characters).
+
+- Add support for suppression of trailing punctuation on
+  note styles (currently in MLZ only).
+
+==========================
+Changes in version 1.0.540
+==========================
+
+- Fix bug in editor + translator rendering with institution names
+  (affects only CSL-m styles)
+
+==========================
+Changes in version 1.0.539
+==========================
+
+- Fix crashing bug triggered by certain update operations. Reported
+  by Markus Piipari, with this fix:
+  
+    https://bitbucket.org/fbennett/citeproc-js/issue/166/second-call-to-updateitems-fails-with
+
+  The fix might also address the following error report on the Zotero forums:
+
+    https://forums.zotero.org/discussion/39244/error-mlz-citation-processor-only-works-second-time/
+
+
+==========================
 Changes in version 1.0.538
 ==========================
 

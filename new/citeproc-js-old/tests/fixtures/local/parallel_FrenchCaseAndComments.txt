@@ -1,0 +1,96 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+This is an example of "parallel" citation collapsing based on rendered
+content, with a French case and comment string citation.
+
+
+>>===== RESULT =====>>
+Cass. 1ere civ., March 28, 2000, <i>JCP G</i>, 2000, 10296, <span style="font-variant:small-caps;">J. Sainte-Rose</span>; <i>D</i>, 2000, somm. p. 358, <span style="font-variant:small-caps;">Ph. Delebecque</span>, p. 900, <span style="font-variant:small-caps;">S. Piedelievre</span>.
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+bluebook-demo-x.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "author": [
+            {
+                "family": "Sainte-Rose", 
+                "given": "J."
+            }
+        ], 
+        "container-title": "JCP G",
+        "volume": "2000",
+        "authority": "Cass. 1ere civ.",
+        "number": "10296",
+        "id": "ITEM-1", 
+        "issued": {
+            "date-parts": [
+                [
+                    "2000", 
+                    "3", 
+                    "28"
+                ]
+            ]
+        }, 
+        "type": "legal_case"
+    },
+    {
+        "author": [
+            {
+                "family": "Delebecque", 
+                "given": "PHillip"
+            }
+        ], 
+        "container-title": "D.",
+        "volume": "2000",
+        "section": "somm.",
+        "authority": "Cass. 1ere civ.",
+        "number": "10296",
+        "page": "358",
+        "id": "ITEM-2", 
+        "issued": {
+            "date-parts": [
+                [
+                    "2000", 
+                    "3", 
+                    "28"
+                ]
+            ]
+        }, 
+        "type": "legal_case"
+    },
+    {
+        "author": [
+            {
+                "family": "Piedelievre", 
+                "given": "S."
+            }
+        ], 
+        "container-title": "D.",
+        "volume": "2000",
+        "section": "somm.",
+        "authority": "Cass. 1ere civ.",
+        "number": "10296",
+        "page": "900",
+        "id": "ITEM-3", 
+        "issued": {
+            "date-parts": [
+                [
+                    "2000", 
+                    "3", 
+                    "28"
+                ]
+            ]
+        }, 
+        "type": "legal_case"
+    }
+]
+<<===== INPUT =====<<

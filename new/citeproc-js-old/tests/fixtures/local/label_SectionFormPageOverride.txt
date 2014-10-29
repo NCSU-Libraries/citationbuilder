@@ -1,0 +1,93 @@
+>>== MODE ==>>
+citation
+<<== MODE ==<<
+
+>>===== CITATION-ITEMS =====>>
+[
+    [
+        {
+            "id": "ITEM-1",
+            "locator": "10",
+            "label": "paragraph"
+        }
+    ],
+    [
+        {
+            "id": "ITEM-1",
+            "locator": ", sec. 100 & 153",
+            "label": "page"
+        }
+    ],
+    [
+        {
+            "id": "ITEM-1",
+            "locator": ", p. 827",
+            "label": "page"
+        }
+    ],
+    [
+        {
+            "id": "ITEM-1",
+            "locator": "829",
+            "label": "page"
+        }
+    ]
+]
+<<===== CITATION-ITEMS =====<<
+
+
+Note the simple space in the final test. Intervening punctuation
+must be supplied on the locator explicitly when supplementing a
+value in the section variable.
+
+>>== RESULT ==>>
+White Slave Traffic (Mann) Act 36 Stat. p. 825 ¶ 10 (1910)
+White Slave Traffic (Mann) Act 36 Stat. p. 825, §§ 100 &#38; 153 (1910)
+White Slave Traffic (Mann) Act 36 Stat. pp. 825, 827 (1910)
+White Slave Traffic (Mann) Act 36 Stat. pp. 825 829 (1910)
+<<== RESULT ==<<
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.0">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation>
+    <layout>
+      <group delimiter=" ">
+        <text variable="title"/>
+        <number variable="volume"/>
+        <text variable="container-title"/>
+        <group delimiter=" ">
+          <label form="symbol" variable="locator"/>
+          <number label-form="symbol" variable="locator"/>
+        </group>
+        <date variable="original-date" prefix="(" suffix=")" form="text" date-parts="year"/>
+      </group>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "type": "legislation",
+        "id": "ITEM-1",
+        "title": "White Slave Traffic (Mann) Act",
+        "container-title":"Stat.",  
+        "section": "p. 825",
+        "original-date": {
+          "date-parts": [[1910]]
+        },
+        "jurisdiction": "us",
+        "volume": "36"
+    }
+]
+<<===== INPUT =====<<

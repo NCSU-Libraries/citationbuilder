@@ -1,0 +1,95 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+Huang Huaixin 黄懷信, Zhang Maorong 張懋鎔, Tian Xudong 田旭東, et al. eds.
+<<===== RESULT =====<<
+
+
+>>===== LANGPARAMS =====>>
+{
+    "persons":["translit","orig"],
+    "institutions":["orig"],
+    "titles":["orig"],
+    "publishers":["orig"],
+    "places":["orig"]
+}
+<<===== LANGPARAMS =====<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.0"
+      default-locale="en-x-translit-zh-alalc97">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation et-al-min="4" et-al-use-first="3">
+    <layout>
+      <names variable="editor">
+        <name />
+        <label form="short" prefix=" "/>
+      </names>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "editor": [
+            {
+                "family": "黄", 
+                "given": "懷信",
+                "multi":{
+                  "_key": {
+                    "zh-alalc97": {
+                      "family": "Huang",
+                      "given":"Huaixin" 
+                    }
+                  }  
+                }
+            },
+            {
+                "family": "張",
+                "given": "懋鎔", 
+                "multi":{
+                  "_key": {
+                    "zh-alalc97": {
+                      "family": "Zhang",
+                      "given":"Maorong" 
+                    }
+                  }  
+                }
+            },
+            {
+                "family": "田", 
+                "given": "旭東",
+                "multi":{
+                  "_key": {
+                    "zh-alalc97": {
+                      "family": "Tian",
+                      "given":"Xudong" 
+                    }
+                  }  
+                }
+            },
+            {
+                "family": "Smith", 
+                "given": "John"
+            }
+        ], 
+        "id": "ITEM-1", 
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

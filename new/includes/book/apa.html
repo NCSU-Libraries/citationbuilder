@@ -4,7 +4,7 @@
 		<li><a class="tiny button disabled active" data-medium="print" href="#">print</a></li>
 		<li><a class="tiny button disabled" data-medium="digital" href="#">digital</a></li>
 	</ul>
-	<input type="hidden" name="type" value="webpage" id="form-type" />
+	<input type="hidden" name="type" value="book" id="form-type" />
 
 	<div class="contributor-container">
 		<div class="row contributor">
@@ -44,18 +44,22 @@
 		</div>
 	</div>
 
+   <div class="row">
+        <div class="columns medium-3 field print">
+            <label for="page">Pages<input type="text" name="page" placeholder="ex: 100-110" /></label>
+        </div>
+    </div>
+
 	<label for="publisher">Publication info</label>
 	<div class="row">
 		<div class="columns medium-6 field print digital">
 			<input type="text" name="publisher" placeholder="publisher" />
 		</div>
 		<div class="columns medium-3 field print digital">
-			<label for="location"><input type="text" name="publisher-place" placeholder="location" />
-			</label>
+			<label for="location"><input type="text" name="publisher-place" placeholder="location" /></label>
 		</div>
 		<div class="columns medium-3 field print digital left ">
-			<label for="year"><input type="text" name="year" placeholder="year" />
-			</label>
+			<label for="year"><input type="text" name="issued-year" placeholder="year" /></label>
 		</div>
 	</div>
 

@@ -127,7 +127,7 @@ CSL.Util.FlipFlopper.prototype.init = function (str, blob) {
 
 CSL.Util.FlipFlopper.prototype._normalizeString = function (str) {
     var i, ilen;
-    str = str.replace(/\s+'\s+/," ’ ","g");
+    str = str.replace(/\s+'\s+/g," ’ ");
     if (str.indexOf(this.quotechars[0]) > -1) {
         for (i = 0, ilen = 2; i < ilen; i += 1) {
             if (this.quotechars[i + 2]) {

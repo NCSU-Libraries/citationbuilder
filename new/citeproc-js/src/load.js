@@ -45,7 +45,7 @@ if (!Array.indexOf) {
 
 var CSL = {
 
-    PROCESSOR_VERSION: "1.0.538",
+    PROCESSOR_VERSION: "1.0.543",
 
     CONDITION_LEVEL_TOP: 1,
 
@@ -232,7 +232,7 @@ var CSL = {
 
     MINIMAL_NAME_FIELDS: ["literal", "family"],
 
-    SWAPPING_PUNCTUATION: [".", "!", "?", ":",","],
+    SWAPPING_PUNCTUATION: [".", "!", "?", ":", ","],
     TERMINAL_PUNCTUATION: [":", ".", ";", "!", "?", " "],
 
     // update modes

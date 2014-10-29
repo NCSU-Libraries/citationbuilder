@@ -704,7 +704,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
 
         obj = [];
         obj.push(citationsPre.length);
-        obj.push(this.process_CitationCluster.call(this, sortedItems));
+        obj.push(this.process_CitationCluster.call(this, sortedItems, citation.citationID));
         ret.push(obj);
         //
         // note for posterity: Rhino and Spidermonkey produce different
@@ -797,6 +797,7 @@ CSL.getAmbiguousCite = function (Item, disambig, visualForm) {
 
     if (this.registry.registry[Item.id] 
         && this.registry.citationreg.citationsByItemId
+        && this.registry.citationreg.citationsByItemId[Item.id]
         && this.registry.citationreg.citationsByItemId[Item.id].length 
         && visualForm) {
         if (this.citation.opt["givenname-disambiguation-rule"] === "by-cite") {
@@ -883,9 +884,16 @@ CSL.getCitationCluster = function (inputList, citationID) {
     this.tmp.last_years_used = [];
     this.tmp.backref_index = [];
     this.tmp.cite_locales = [];
+    var suppressTrailingPunctuation = false;
+    if (this.opt.xclass === "note" && this.citation.opt.suppressTrailingPunctuation) {
+        suppressTrailingPunctuation = true;
+    }
     if (citationID) {
-        this.registry.citationreg.citationById[citationID].properties.backref_index = false;
-        this.registry.citationreg.citationById[citationID].properties.backref_citation = false;
+        //this.registry.citationreg.citationById[citationID].properties.backref_index = false;
+        //this.registry.citationreg.citationById[citationID].properties.backref_citation = false;
+        if (this.registry.citationreg.citationById[citationID].properties["suppress-trailing-punctuation"]) {
+            suppressTrailingPunctuation = true;
+        }
     }
 
     // Adjust locator positions if that looks like a sensible thing to do.
@@ -1044,7 +1052,9 @@ CSL.getCitationCluster = function (inputList, citationID) {
               && !this.tmp.just_looking
               && this.tmp.area === "citation")) { 
 
-            this.output.queue[this.output.queue.length - 1].strings.suffix = use_layout_suffix;
+            if (!suppressTrailingPunctuation) {
+                this.output.queue[this.output.queue.length - 1].strings.suffix = use_layout_suffix;
+            }
             this.output.queue[0].strings.prefix = this.citation.opt.layout_prefix;
         }
     }

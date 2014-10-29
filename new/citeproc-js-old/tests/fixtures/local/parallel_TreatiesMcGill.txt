@@ -1,0 +1,89 @@
+>>===== MODE =====>>
+citation
+<<===== MODE===== <<
+>>===== RESULT =====>>
+>>[0] <i>Convention on the Elimination of All Forms of Discrimination against Women</i>, 1 March 1980, 1 UNTS 13, 1111 Canadian TS 2222 (Entered into force 03 September 1981, ratification by Canada 10 Dec 1981) [<i>CEDAW</i>].
+<<===== RESULT===== <<
+>>===== CITATIONS =====>>
+[
+  [
+    {
+      "citationItems": [
+        {
+          "label": "page",
+          "id": 21
+        },
+        {
+          "label": "page",
+          "id": 27
+        }
+      ],
+      "properties": {
+        "noteIndex": 1,
+        "index": 0
+      },
+      "citationID": "gfmrj5f3s"
+    },
+    [],
+    []
+  ]
+]
+<<===== CITATIONS===== <<
+>>===== CSL =====>>
+mcgill-guide-v7.csl
+<<===== CSL===== <<
+
+    "references": "Entered into force 03 September 1981, ratification by Canada 10 Dec 1981",
+
+    "references": "Entered into force 03 September 1981, ratification by Canada 10 Dec 1981",
+
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 21,
+    "type": "treaty",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "Convention on the Elimination of All Forms of Discrimination against Women",
+    "container-title": "UNTS",
+    "page": "13",
+    "volume": "1",
+    "shortTitle": "CEDAW",
+    "event-date": {
+      "date-parts": [
+        [
+          "1980",
+          3,
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "type": "treaty",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "Convention on the Elimination of All Forms of Discrimination against Women",
+    "container-title": "Canadian TS",
+    "page": "2222",
+    "volume": "1111",
+    "shortTitle": "CEDAW",
+    "event-date": {
+      "date-parts": [
+        [
+          "1980",
+          3,
+          1
+        ]
+      ]
+    }
+  }
+]
+<<===== INPUT===== <<
+
+
+#    "shortTitle": "CEDAW",

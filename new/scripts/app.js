@@ -18,7 +18,7 @@ var app = {
         app.activateMediumButtons();
         app.getMedium();
         app.handleMediumFields();
-        app.setFormType();
+        // app.setFormType();
         app.activateContributorButtons();
         app.handleDatePicker();
 
@@ -27,6 +27,7 @@ var app = {
 
         $('#clear-form').click(function(e){
             var form = $('form.citation-form[data-csl="'+app.style+'"]:visible *');
+            console.log(form);
             $(form).each(function(){
                 var type = $(this).attr('type');
                 var tag = $(this).prop('tagName');
@@ -83,9 +84,9 @@ var app = {
         $('.citation-form').hide();
     },
 
-    setFormType : function(){
-        $('.citation-form #form-type').val(app.cite);
-    },
+    // setFormType : function(){
+    //     $('.citation-form #form-type').val(app.cite);
+    // },
 
     activateMediumButtons : function(){
         //citation medium

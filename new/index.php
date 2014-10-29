@@ -34,7 +34,7 @@
                         <?php include './includes/citation-select.php'; ?>
                         <div id="form-container">
                             <?php
-                                $csl_array = array('apa','chicago','cse','mla');
+                                $csl_array = array('apa','chicago-author-date','council-of-science-editors-author-date','modern-language-association');
                                 $medium_array = array('book','chapter','magazine','newspaper','article-journal','website');
                                 foreach($medium_array as $med){
                                     print '<div class="form-parent" id="'.$med.'">';

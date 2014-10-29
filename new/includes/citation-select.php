@@ -20,9 +20,9 @@
         <select name="citation-style">
             <option value="default">--</option>
             <option value="apa">APA 6</option>
-            <option value="mla">MLA 7</option>
-            <option value="chicago">Chicago (author-date)</option>
-            <option value="cse">CSE/CBE (author-date)</option>
+            <option value="modern-language-association">MLA 7</option>
+            <option value="chicago-author-date">Chicago (author-date)</option>
+            <option value="council-of-science-editors-author-date">CSE/CBE (author-date)</option>
         </select>
     </div>
 </div>

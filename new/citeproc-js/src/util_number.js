@@ -199,8 +199,10 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable, type)
         var localeType = this.opt["cite-lang-prefs"][languageRole][0];
         num = this.transform.getTextSubField(ItemObject, variable, "locale-"+localeType, true);
         num = num.name;
+        // RefMe bug report: print("XX D'oh! (1): "+num);
     } else {
         num = ItemObject[variable];
+        // RefMe bug report: print("XX D'oh! (2): "+num);
     }
 
     // Possibly apply short form.
@@ -211,6 +213,7 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable, type)
     // abbreviation entry to the UI if none is found. The entry is
     // added only if the is-numeric test later turns up false.
     if (num && this.sys.getAbbreviation) {
+        // RefMe bug report: print("XX D'oh! (3): "+num);
         // true as the fourth argument suppresses update of the UI
         num = ("" + num).replace(/^\"/, "").replace(/\"$/, "");
         var jurisdiction = this.transform.loadAbbreviation(ItemObject.jurisdiction, "number", num);
@@ -238,6 +241,9 @@ CSL.Engine.prototype.processNumber = function (node, ItemObject, variable, type)
         this.tmp.shadow_numbers[variable].label = variable;
         // Strip off enclosing quotes, if any. Parsing logic
         // does not depend on them, but we'll strip them if found.
+
+        // RefMe bug report: print("XX D'oh! (4): "+num);
+
         if (num.slice(0, 1) === '"' && num.slice(-1) === '"') {
             num = num.slice(1, -1);
         }

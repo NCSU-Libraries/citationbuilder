@@ -1,0 +1,58 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+BoGUS (Bureau of Gaseous Unformed Stuff)
+<<===== RESULT =====<<
+
+>>== ABBREVIATIONS ==>>
+{
+    "default": {
+        "institution-part": {
+            "Bureau of Gaseous Unformed Stuff": "BoGUS"
+        }
+    }
+}
+<<== ABBREVIATIONS ==<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.1mlz1"
+      default-locale="en">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation>
+    <layout>
+      <names variable="author">
+        <name/>
+        <institution institution-parts="short-long">
+          <institution-part name="long" if-short="true" prefix=" (" suffix=")"/>
+        </institution>
+      </names>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "author": [
+            {
+                "literal": "Bureau of Gaseous Unformed Stuff"
+            }
+        ], 
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

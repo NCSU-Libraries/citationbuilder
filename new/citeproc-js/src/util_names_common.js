@@ -38,6 +38,10 @@ CSL.NameOutput.prototype.setCommonTerm = function () {
             }
             freeters_offset += 1;
         }
+        if (this.persons[v].length !== this.persons[vv].length) {
+            this.common_term = false;
+            return;
+        }
         for (var j = 0, jlen = this.persons[v].length; j < jlen; j += 1) {
             if (this.etal_spec[v].persons[j] !== this.etal_spec[vv].persons[j]
                 || !this._compareNamesets(this.persons[v][j], this.persons[vv][j])) {

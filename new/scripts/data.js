@@ -61,18 +61,15 @@ var data = {
 
                 if(name == 'issued'){
                     var str = val.split('-');
-                    // year = (str[2] == '') ? '' : str[2];
-                    // month = (str[1] == '') ? '' : str[1];
-                    // day = (str[0] == '') ? '' : str[0];
-                    json['Item-1'][name] = {'date-parts' : [[year,month,'poop']]};
+                    json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
+                    // json['Item-1'][name] = {'date-parts' : [[str[2]]]};
                 }
 
                 // month/year inputs
                 if(name == 'issued-month' || name == 'issued-year'){
                     var month = $(data.form).find('select[name*="issued-month"]').val();
                     var year = $(data.form).find('input[name*="issued-year"]').val();
-                    // month = (month == '') ? '' : month;
-                    // year = (year == '') ? '' : year;
+
                     json['Item-1']['issued'] = {'date-parts' : [[year,month]]};
                 }
             }

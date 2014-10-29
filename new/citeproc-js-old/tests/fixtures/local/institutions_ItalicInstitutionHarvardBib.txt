@@ -1,0 +1,63 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">Doe, J., <i>Facebook</i>, 2000. My amazing personal experience. Available at: http://facebook.com/page/address.</div>
+  <div class="csl-entry"><i>Facebook</i>, 2000. My amazing institutional experience. Available at: http://facebook.com/page/address.</div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+harvard1-institution-italic.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "id": "ITEM-1",
+        "author": [
+            {
+                "literal": "Facebook"
+            }
+        ], 
+		"title": "My amazing institutional experience",
+		"issued": {
+			"date-parts": [
+				[ 
+			  	  2000
+				]
+			]
+		},
+		"URL": "http://facebook.com/page/address",
+        "type": "webpage"
+    },
+    {
+        "id": "ITEM-2",
+        "author": [
+            {
+                "family": "Doe",
+                "given": "John"
+            },
+            {
+                "literal": "Facebook"
+            }
+        ], 
+		"title": "My amazing personal experience",
+		"issued": {
+			"date-parts": [
+				[ 
+			  	  2000
+				]
+			]
+		},
+		"URL": "http://facebook.com/page/address",
+        "type": "webpage"
+    }
+]
+<<===== INPUT =====<<

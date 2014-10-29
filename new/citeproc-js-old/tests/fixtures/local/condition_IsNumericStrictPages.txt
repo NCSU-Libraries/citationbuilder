@@ -1,0 +1,114 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+>>===== OPTIONS =====>>
+{
+   "strict_page_numbers": true
+}
+<<===== OPTIONS =====<<
+
+
+>>===== RESULT =====>>
+Volume is numeric: 4 / Page is numeric: 123
+Volume is non-numeric: Volume 10 / Page is non-numeric: ix
+Volume is numeric: L100 / Page is numeric: 123
+Volume is non-numeric: cm / Page is non-numeric: e678
+<<===== RESULT =====<<
+
+>>===== CITATION-ITEMS =====>>
+[
+    [
+        {
+            "id": "ITEM-1"
+        }
+    ], 
+    [
+        {
+            "id": "ITEM-2"
+        }
+    ], 
+    [
+        {
+            "id": "ITEM-3"
+        }
+    ],
+    [
+        {
+            "id": "ITEM-4"
+        }
+    ]
+]
+<<===== CITATION-ITEMS =====<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.0">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation>
+    <layout delimiter="&#x0A;">
+      <group delimiter=" / ">
+        <group delimiter=" ">
+          <choose>
+            <if is-numeric="volume" match="all">
+              <text value="Volume is numeric:"/>
+            </if>
+            <else>
+              <text value="Volume is non-numeric:"/>
+            </else>
+          </choose>
+          <number variable="volume"/>
+        </group>
+        <group delimiter=" ">
+          <choose>
+            <if is-numeric="page" match="all">
+              <text value="Page is numeric:"/>
+            </if>
+            <else>
+              <text value="Page is non-numeric:"/>
+            </else>
+          </choose>
+          <number variable="page"/>
+        </group>
+      </group>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "id": "ITEM-1", 
+        "page": "123",
+        "volume": "4",
+        "type": "book"
+    }, 
+    {
+        "id": "ITEM-2", 
+        "page": "ix",
+        "volume": "Volume 10",
+        "type": "book"
+    },
+    {
+        "id": "ITEM-3", 
+        "page": "123",
+        "volume": "L100",
+        "type": "book"
+    },
+    {
+        "id": "ITEM-4", 
+        "page": "e678",
+        "volume": "cm",
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

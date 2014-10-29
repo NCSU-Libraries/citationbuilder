@@ -1,0 +1,51 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+>>===== OPTIONS =====>>
+{
+    "static_statute_locator":false,
+    "clobber_locator_if_no_statute_section":false,
+    "handle_parallel_articles":false,
+    "rtl_support":false
+}
+<<===== OPTIONS =====<<
+
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">BBC News</div>
+  <div class="csl-entry">Doe, J.</div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+harvard-leeds-metropolitan-university.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "author": [
+            {
+                "family": "Doe", 
+                "given": "John"
+            }
+        ], 
+        "id": "ITEM-1", 
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "BBC News",
+                "given":""
+            }
+        ], 
+        "id": "ITEM-2", 
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

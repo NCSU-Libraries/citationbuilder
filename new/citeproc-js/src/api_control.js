@@ -152,3 +152,7 @@ CSL.Engine.prototype.setAbbreviations = function (arg) {
         this.sys.setAbbreviations(arg);
     }
 };
+
+CSL.Engine.prototype.setSuppressTrailingPunctuation = function (arg) {
+    this.citation.opt.suppressTrailingPunctuation = !!arg;
+};

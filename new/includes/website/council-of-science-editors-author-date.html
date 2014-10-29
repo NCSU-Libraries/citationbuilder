@@ -1,0 +1,100 @@
+<form class="citation-form" data-csl="council-of-science-editors-author-date">
+<hr>
+    <ul class="button-group unstyle-list cite-medium">
+        <li><a class="tiny button disabled active" data-medium="digital" href="#">digital</a></li>
+    </ul>
+    <input type="hidden" name="type" value="webpage" id="form-type" />
+
+    <div class="contributor-container">
+        <div class="row contributor">
+            <div class="columns medium-2 field print digital">
+                <label for="author">Contributor
+                    <select name="contributor">
+                        <option value="author">Author</option>
+                        <option value="editor">Editor</option>
+                        <option value="translator">Translator</option>
+                    </select>
+                </label>
+            </div>
+            <div class="columns medium-4 field print digital">
+                <label>First Name<input type="text" name="given" /></label>
+            </div>
+            <div class="columns medium-1 field print digital">
+                <label>MI<input type="text" name="givenMiddle" /></label>
+            </div>
+            <div class="columns medium-4 last-name field print digital">
+                <label>Last Name/Corp.<input type="text" name="family" /></label>
+            </div>
+            <div class="columns medium-1 field print digital">
+                <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-1 right">
+            <div class="add-contributor" class=""><small><a href="#"><i class="fa fa-plus-square"></i></a></small></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print digital">
+            <label for="title">Title<input type="text" name="title" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field digital">
+            <label for="URL">URL<input type="text" name="URL" /></label>
+        </div>
+    </div>
+
+    <label for="publisher">Publication info</label>
+    <div class="row">
+        <div class="columns medium-6 field print digital">
+            <input type="text" name="publisher" placeholder="publisher" />
+        </div>
+        <div class="columns medium-3 field print digital">
+            <label for="location"><input type="text" name="publisher-place" placeholder="location" /></label>
+        </div>
+        <div class="columns medium-3 field print digital left ">
+            <label for="year"><input type="text" name="issued-year" placeholder="year" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+<!--         <div class="columns medium-3 field print digital">
+            <label for="issued-month">Published/modified
+                <select name="issued-month">
+                    <option value="">month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </label>
+        </div>
+        <div class="columns medium-3 field print digital">
+            <label for="issued-year">&nbsp;
+                <input type="text" name="issued-year" placeholder="yyyy" class="columns medium-6"/>
+            </label>
+        </div> -->
+<!--         <div class="columns medium-4 field print digital">
+            <label for="issued">Electronically published<input type="text" name="issued" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+        </div> -->
+
+        <div class="columns medium-4 field print digital left">
+            <label for="accessed">Date accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+        </div>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
