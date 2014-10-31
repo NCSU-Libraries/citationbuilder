@@ -336,7 +336,7 @@
   </macro>
   <macro name="locators">
     <choose>
-      <if type="article-journal chapter" match="any">
+      <if type="article-journal article-magazine" match="any">
         <group prefix=", " delimiter=", ">
           <group>
             <text variable="volume" font-style="italic"/>

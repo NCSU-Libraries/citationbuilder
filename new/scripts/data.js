@@ -33,12 +33,14 @@ var data = {
             var middle = $(this).find('input[name*="givenMiddle"]').val();
             var last = $(this).find('input[name*="family"]').val();
 
+            var first = (middle) ? given+' '+middle : given;
+
             //build contributor object
             if(given + middle + last != ''){
                 if(contribAry.indexOf(contrib)){
-                    json['Item-1'][contrib] = [{'given':given+' '+middle, 'family':last}];
+                    json['Item-1'][contrib] = [{'given':first, 'family':last}];
                 } else{
-                    json['Item-1'][contrib].push({'given':given+' '+middle, 'family':last});
+                    json['Item-1'][contrib].push({'given':first, 'family':last});
                 }
             }
 
@@ -62,13 +64,12 @@ var data = {
                 if(name == 'issued'){
                     var str = val.split('-');
                     json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
-                    // json['Item-1'][name] = {'date-parts' : [[str[2]]]};
                 }
 
                 // month/year inputs
-                if(name == 'issued-month' || name == 'issued-year'){
-                    var month = $(data.form).find('select[name*="issued-month"]').val();
-                    var year = $(data.form).find('input[name*="issued-year"]').val();
+                if(name == 'issued-mo' || name == 'issued-yr'){
+                    var month = $(data.form).find('select[name*="issued-mo"]').val();
+                    var year = $(data.form).find('input[name*="issued-yr"]').val();
 
                     json['Item-1']['issued'] = {'date-parts' : [[year,month]]};
                 }
