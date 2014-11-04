@@ -25,6 +25,7 @@ var data = {
         var json = {"Item-1": {}};
         var contribObj = {};
         var contribAry = [];
+        var dateObj = [];
 
         // collect contributor data
         $('.contributor:visible').each(function(i){
@@ -67,12 +68,26 @@ var data = {
                 }
 
                 // month/year inputs
-                if(name == 'issued-mo' || name == 'issued-yr'){
-                    var month = $(data.form).find('select[name*="issued-mo"]').val();
-                    var year = $(data.form).find('input[name*="issued-yr"]').val();
 
-                    json['Item-1']['issued'] = {'date-parts' : [[year,month]]};
+                if(name == 'issued-mo' || name == 'issued-yr' || name == 'issued-dy'){
+                    var year = $(data.form).find('input[name*="issued-yr"]').val();
+                    var month = $(data.form).find('select[name*="issued-mo"]').val();
+                    var day = $(data.form).find('input[name*="issued-dy"]').val();
+
+                    if(year){
+                        dateObj[0] = year;
+                    }
+                    if(month){
+                        dateObj[1] = month;
+                    }
+                    if(day){
+                        dateObj[2] = day;
+                    }
+
+                    json['Item-1']['issued'] = {'date-parts' : [dateObj]};
+
                 }
+
             }
         }
         console.log(json);
