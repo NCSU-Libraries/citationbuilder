@@ -154,8 +154,9 @@
       <choose>
         <if type="webpage post-weblog" match="any">
           <date variable="issued" delimiter=" ">
-            <date-part name="month"/>
-            <date-part name="day"/>
+            <date-part name="month" prefix="Last modified " />
+            <date-part name="day" suffix=", " />
+            <date-part name="year" />
           </date>
         </if>
       </choose>
@@ -252,11 +253,11 @@
       <if type="article-journal">
         <choose>
           <if variable="volume">
-            <text variable="volume" prefix=" "/>
-            <group prefix=" (" suffix=")">
+            <text variable="volume" prefix=" " suffix=","/>
+            <group prefix=" " suffix="">
               <choose>
                 <if variable="issue">
-                  <text variable="issue"/>
+                  <text variable="issue" prefix="no. "/>
                 </if>
                 <else>
                   <date variable="issued">
@@ -349,6 +350,11 @@
           </else>
         </choose>
       </else-if>
+      <else-if type="article-magazine"> <!-- EO added else-if 11.4.14  -->
+        <choose>
+            <text variable="page" prefix=", "/>
+        </choose>
+      </else-if>
     </choose>
   </macro>
   <macro name="point-locators">
@@ -409,7 +415,18 @@
     <choose>
       <if variable="issued">
         <date variable="issued">
-          <date-part name="year"/>
+          <if type="article-journal">
+            <date-part name="year" prefix="(" suffix=")"/>
+          </if>
+          <else-if type="webpage">
+
+          </else-if>
+          <else-if type="article-magazine">
+            <date-part prefix=" " name="year"/>
+          </else-if>
+          <else>
+            <date-part prefix=", " name="year"/>
+          </else>
         </date>
       </if>
       <else-if variable="accessed">
@@ -537,7 +554,7 @@
     <layout suffix=".">
       <group delimiter=". ">
         <text macro="contributors"/>
-        <text macro="date"/>
+        <!-- <text macro="date"/> -->
         <text macro="title"/>
       </group>
       <text macro="description"/>
@@ -550,8 +567,9 @@
       <text macro="locators"/>
       <text macro="collection-title" prefix=". "/>
       <text macro="issue"/>
+      <text prefix="" macro="date"/> <!-- EO moved here from above -->
       <text macro="locators-article"/>
-      <text macro="access" prefix=". "/>
+      <text macro="access" prefix=". " />
     </layout>
   </bibliography>
 </style>

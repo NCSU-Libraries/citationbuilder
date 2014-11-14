@@ -6,28 +6,32 @@ var app = {
         $('#cite-select select').change(function(e){
             app.cite = $(this).val();
             app.loadForm();
+
+            // set url
+            app.setURL();
         })
 
         // citation style select
         $('#cite-style-select select').change(function(e){
             app.style = $(this).val();
             app.loadForm();
+
+            // set URL
+            app.setURL();
         })
 
+        app.setFormTypeFromUrl();
         app.checkFormOnLoad();
-        app.activateMediumButtons();
-        app.getMedium();
-        app.handleMediumFields();
-        // app.setFormType();
+        app.activateCitationButtons();
+        app.getCitation();
+        app.handleCitationFields();
         app.activateContributorButtons();
         app.handleDatePicker();
 
         // add clear form button
-
-
         $('#clear-form').click(function(e){
             var form = $('form.citation-form[data-csl="'+app.style+'"]:visible *');
-            console.log(form);
+
             $(form).each(function(){
                 var type = $(this).attr('type');
                 var tag = $(this).prop('tagName');
@@ -57,8 +61,12 @@ var app = {
     },
 
     checkFormOnLoad : function(){
-        app.cite = $('#cite-select select').val();
-        app.style = $('#cite-style-select select').val();
+        if(!app.cite){
+            app.cite = $('#cite-select select').val();
+        }
+        if(!app.style){
+            app.style = $('#cite-style-select select').val();
+        }
         app.loadForm();
     },
 
@@ -69,11 +77,10 @@ var app = {
         $('.'+app.style).show();
         app.form = '#'+app.cite+' .'+app.style;
 
-        app.activateMediumButtons();
-        app.getMedium();
-        app.handleMediumFields();
+        app.activateCitationButtons();
+        app.getCitation();
+        app.handleCitationFields();
         app.handleDatePicker();
-
     },
 
     showForm : function(){
@@ -84,36 +91,53 @@ var app = {
         $('.citation-form').hide();
     },
 
-    // setFormType : function(){
-    //     $('.citation-form #form-type').val(app.cite);
-    // },
+    setFormTypeFromUrl : function(){
+        if(window.location.hash){
+            var pathArray = window.location.hash.split( '/' );
+            app.cite = pathArray[1];
+            app.style = pathArray[2];
+        }
 
-    activateMediumButtons : function(){
-        //citation medium
-        $('#'+app.cite+' .'+app.style+' .cite-medium li a').click(function(e){
-            $('#'+app.cite+' .'+app.style+' .cite-medium li a').removeClass('active');
+        // handle select dropdowns
+        app.setDropdowns();
+    },
+
+    setDropdowns : function(){
+        $('#cite-select select').val(app.cite);
+        $('#cite-style-select select').val(app.style);
+    },
+
+    activateCitationButtons : function(){
+        //citation
+        $('#'+app.cite+' .'+app.style+' .citation li a').click(function(e){
+            $('#'+app.cite+' .'+app.style+' .citation li a').removeClass('active');
             $(this).addClass('active');
-            app.medium = $(this).data('medium');
-            app.handleMediumFields();
+            app.citation = $(this).data('citation');
+            app.handleCiteFields();
 
             e.preventDefault();
         })
     },
 
-    getMedium : function(){
-        $('#'+app.cite+' .'+app.style+' .cite-medium li').each(function(){
+    getCitation : function(){
+        $('#'+app.cite+' .'+app.style+' .citation li').each(function(){
             var elem = $(this).find('a');
 
             if($(elem).hasClass('active')){
-                app.medium = $(elem).data('medium');
+                app.citation = $(elem).data('citation');
             }
         });
-
     },
 
-    handleMediumFields : function(){
+    setURL : function(){
+        if(app.cite && app.style){
+            window.location.hash = '#/'+app.cite+'/'+app.style;
+        }
+    },
+
+    handleCitationFields : function(){
         $('.citation-form .field').hide();
-        $('.citation-form .'+app.medium).show();
+        $('.citation-form .'+app.citation).show();
     },
 
     activateContributorButtons : function(){

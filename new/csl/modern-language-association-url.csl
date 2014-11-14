@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never">
   <info>
-    <title>Modern Language Association 7th edition</title>
+    <title>Modern Language Association 7th edition (with URL)</title>
     <title-short>MLA</title-short>
-    <id>http://www.zotero.org/styles/modern-language-association</id>
-    <link href="http://www.zotero.org/styles/modern-language-association" rel="self"/>
+    <id>http://www.zotero.org/styles/modern-language-association-with-url</id>
+    <link href="http://www.zotero.org/styles/modern-language-association-with-url" rel="self"/>
     <link href="http://owl.english.purdue.edu/owl/section/2/11/" rel="documentation"/>
     <author>
       <name>Ilouise S. Bradford</name>
@@ -32,8 +32,8 @@
     </contributor>
     <category citation-format="author"/>
     <category field="generic-base"/>
-    <summary>This style adheres to the MLA 7th edition handbook and contains modifications to these types of sources: e-mail, forum posts, interviews, manuscripts, maps, presentations, TV broadcasts, and web pages.</summary>
-    <updated>2014-09-21T00:39:49+00:00</updated>
+    <summary>The 2009 MLA Style for purposes where the URL is still required</summary>
+    <updated>2014-08-28T02:16:44+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -94,6 +94,7 @@
         <date-part name="month" form="short" suffix=" "/>
         <date-part name="year"/>
       </date>
+      <text variable="URL" prefix=". &lt;" suffix="&gt;"/>
     </group>
   </macro>
   <macro name="issued-full-date">
@@ -330,7 +331,6 @@
           <text macro="volume" prefix=" " suffix="."/>
           <text macro="number-of-volumes-only" prefix=" " suffix="."/>
           <text macro="publisher-year" prefix=" " suffix="."/>
-          <text variable="archive_location" prefix=" " suffix=""/>
         </if>
         <else-if type="chapter paper-conference" match="any">
           <group>
@@ -342,7 +342,6 @@
             <text macro="publisher-year" prefix=" " suffix="."/>
           </group>
           <text variable="page" prefix=" " suffix="."/>
-          <text variable="archive_location" prefix=" " suffix=""/>
         </else-if>
         <else-if type="thesis">
           <text variable="genre" prefix=" " suffix="."/>
@@ -393,9 +392,9 @@
           </date>
           <text variable="genre" prefix=" " suffix="."/>
         </else-if>
-        <else-if type="webpage post-weblog" match="any">
-          <text variable="genre" prefix=" " suffix="."/>
+        <else-if type="webpage">
           <text variable="container-title" font-style="italic" prefix=" " suffix="."/>
+          <text variable="genre" prefix=" " suffix="."/>
           <group delimiter=", " prefix=" ">
             <text macro="publisher"/>
             <text macro="issued-full-date" suffix="."/>
@@ -422,30 +421,26 @@
                       <text variable="volume"/>
                       <text variable="issue"/>
                     </group>
-                    <date variable="issued" prefix="" suffix=":">
+                    <date variable="issued" prefix="(" suffix="):">
                       <date-part name="year"/>
                     </date>
                   </group>
-                  <text macro="pages" prefix=" " suffix="." />
-                  <text variable="archive_location" prefix="" suffix="" />
+                  <text macro="pages" prefix=" "/>
                 </if>
                 <else>
-                  <group>
-                    <date variable="issued">
-                      <date-part name="day" suffix=" "/>
-                      <date-part name="month" form="short" suffix=" " strip-periods="false"/>
-                      <date-part name="year"/>
-                    </date>
-                    <choose>
-                      <if variable="URL DOI" match="any">
-                        <text variable="page" prefix=": "/>
-                        <text variable="archive_location" prefix=". "/>
-                      </if>
-                      <else>
-                        <text macro="pages" prefix=": "/>
-                      </else>
-                    </choose>
-                  </group>
+                  <date variable="issued">
+                    <date-part name="day" suffix=" "/>
+                    <date-part name="month" form="short" suffix=" " strip-periods="false"/>
+                    <date-part name="year"/>
+                  </date>
+                  <choose>
+                    <if variable="URL DOI" match="any">
+                      <text variable="page" prefix=": "/>
+                    </if>
+                    <else>
+                      <text macro="pages" prefix=": "/>
+                    </else>
+                  </choose>
                 </else>
               </choose>
             </group>

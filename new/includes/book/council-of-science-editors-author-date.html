@@ -1,8 +1,8 @@
 <form class="citation-form" data-csl="council-of-science-editors-author-date">
 <hr>
-    <ul class="button-group unstyle-list cite-medium">
-        <li><a class="tiny button disabled active" data-medium="print" href="#">print</a></li>
-        <li><a class="tiny button disabled" data-medium="digital" href="#">digital</a></li>
+    <ul class="button-group unstyle-list citation">
+        <li><a class="tiny button disabled active" data-citation="print" href="#">print</a></li>
+        <li><a class="tiny button disabled" data-citation="digital" href="#">digital</a></li>
     </ul>
     <input type="hidden" name="type" value="book" id="form-type" />
 
@@ -45,18 +45,18 @@
     </div>
 
     <div class="row">
-        <div class="columns medium-5 field print digital">
+        <div class="columns medium-5 field">
             <label for="edition">Edition<input type="text" name="edition" /></label>
         </div>
     </div>
 
-    <label for="publisher">Publication info</label>
+    <label for="publisher">Publication Info</label>
     <div class="row">
         <div class="columns medium-6 field print digital">
             <input type="text" name="publisher" placeholder="publisher" />
         </div>
         <div class="columns medium-3 field print digital">
-            <label for="publisher-place"><input type="text" name="publisher-place" placeholder="location" /></label>
+            <label for="publisher-place"><input type="text" name="publisher-place" placeholder="City (ST)" /></label>
         </div>
         <div class="columns medium-3 field print digital left download">
             <label for="year"><input type="text" name="year" placeholder="year" /></label>
@@ -78,7 +78,7 @@
 
     <div class="row">
         <div class="columns medium-4 field digital left">
-            <label for="accessed">Date accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+            <label for="accessed">Date Accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
         </div>
     </div>
 

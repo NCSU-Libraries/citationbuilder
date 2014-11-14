@@ -1,9 +1,9 @@
 <form class="citation-form" data-csl="modern-language-association">
 <hr>
-    <ul class="button-group unstyle-list cite-medium">
-        <li><a class="tiny button disabled active" data-medium="print" href="#">in print</a></li>
-        <li><a class="tiny button disabled" data-medium="digital" href="#">digital</a></li>
-        <li><a class="tiny button disabled" data-medium="database" href="#">in a database</a></li>
+    <ul class="button-group unstyle-list citation">
+        <li><a class="tiny button disabled active" data-citation="print" href="#">in print</a></li>
+        <li><a class="tiny button disabled" data-citation="digital" href="#">digital</a></li>
+        <li><a class="tiny button disabled" data-citation="database" href="#">in a database</a></li>
     </ul>
     <input type="hidden" name="type" value="article-magazine" id="form-type" />
 
@@ -51,15 +51,9 @@
         </div>
     </div>
 
-<!--     <div class="row">
-        <div class="columns medium-12 field digital">
-            <label for="publisher">Site publisher/sponsor:<input type="text" name="publisher" placeholder="" /></label>
-        </div>
-    </div> -->
-
     <div class="row">
         <div class="columns medium-3 field print digital database">
-            <label for="issued-month">Date published
+            <label for="issued-month">Date Published
                 <select name="issued-month">
                     <option value="">month</option>
                     <option value="1">January</option>
@@ -84,9 +78,6 @@
             </label>
         </div>
 
- <!--        <div class="columns medium-3 field print digital database input-append date">
-            <label for="issued">Date published<input type="text" name="issued" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
-        </div> -->
         <div class="columns medium-3 field print database left">
             <label for="page">Pages<input type="text" name="page" placeholder="ex: 100-110" /></label>
         </div>
@@ -95,7 +86,7 @@
 
     <div class="row">
         <div class="columns medium-12 field database">
-            <label for="title-short">Database title<input type="text" name="title-short" /></label>
+            <label for="archive_location">Database Title<input type="text" name="archive_location" /></label>
         </div>
     </div>
 
@@ -107,7 +98,7 @@
 
     <div class="row">
         <div class="columns medium-3 field digital database input-append date">
-            <label for="accessed">Date accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+            <label for="accessed">Date Accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
         </div>
     </div>
 
