@@ -28,6 +28,13 @@ var app = {
         app.activateContributorButtons();
         app.handleDatePicker();
 
+        // add contrib button
+        $('.add-contributor a').click(function(e){
+            app.addContributor();
+
+            e.preventDefault();
+        })
+
         // add clear form button
         $('#clear-form').click(function(e){
             var form = $('form.citation-form[data-csl="'+app.style+'"]:visible *');
@@ -113,7 +120,7 @@ var app = {
             $('#'+app.cite+' .'+app.style+' .citation li a').removeClass('active');
             $(this).addClass('active');
             app.citation = $(this).data('citation');
-            app.handleCiteFields();
+            app.handleCitationFields();
 
             e.preventDefault();
         })
@@ -141,11 +148,24 @@ var app = {
     },
 
     activateContributorButtons : function(){
-        $('.add-contributor a').click(function(e){
-            app.addContributor();
+
+        $('.remove-contributor a').click(function(e){
+            app.removeContributor($(this));
+
+            if($(app.form +' .contributor').length > 1){
+                $('.remove-contributor').css('opacity', '1');
+            } else{
+                $('.remove-contributor').css('opacity', '0.2');
+            }
 
             e.preventDefault();
         })
+
+        if($(app.form +' .contributor').length > 1){
+            $('.remove-contributor').css('opacity', '1');
+        } else{
+            $('.remove-contributor').css('opacity', '0.2');
+        }
 
         app.countContributor();
     },
@@ -153,19 +173,18 @@ var app = {
     addContributor : function(){
         $(app.form+' .contributor-container').append($('.contributor')[0].outerHTML);
 
-        $('.remove-contributor a').click(function(e){
-            app.removeContributor($(this));
-
-            e.preventDefault();
-        })
-
         app.countContributor();
+        app.activateContributorButtons();
 
     },
 
     removeContributor : function(elem){
-        $(elem).parent().parent().parent().parent().remove();
-        app.countContributor();
+        if($(app.form +' .contributor').length > 1){
+            $(elem).parent().parent().parent().parent().remove();
+            $('.remove-contributor').css('opacity', '1');
+        } else{
+            $('.remove-contributor').css('opacity', '0.2');
+        }
     },
 
     countContributor : function(){

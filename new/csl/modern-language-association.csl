@@ -330,7 +330,7 @@
           <text macro="volume" prefix=" " suffix="."/>
           <text macro="number-of-volumes-only" prefix=" " suffix="."/>
           <text macro="publisher-year" prefix=" " suffix="."/>
-          <text variable="archive_location" prefix=" " suffix=""/>
+          <text variable="archive_location" prefix=" " suffix="."/>
         </if>
         <else-if type="chapter paper-conference" match="any">
           <group>
@@ -342,7 +342,7 @@
             <text macro="publisher-year" prefix=" " suffix="."/>
           </group>
           <text variable="page" prefix=" " suffix="."/>
-          <text variable="archive_location" prefix=" " suffix=""/>
+          <text variable="archive_location" prefix=" " suffix="."/>
         </else-if>
         <else-if type="thesis">
           <text variable="genre" prefix=" " suffix="."/>
@@ -427,7 +427,7 @@
                     </date>
                   </group>
                   <text macro="pages" prefix=" " suffix="." />
-                  <text variable="archive_location" prefix="" suffix="" />
+                  <text variable="archive_location" prefix="" suffix="" font-style="italic"/>
                 </if>
                 <else>
                   <group>
@@ -439,7 +439,7 @@
                     <choose>
                       <if variable="URL DOI" match="any">
                         <text variable="page" prefix=": "/>
-                        <text variable="archive_location" prefix=". "/>
+                        <text variable="archive_location" prefix=". " />
                       </if>
                       <else>
                         <text macro="pages" prefix=": "/>
