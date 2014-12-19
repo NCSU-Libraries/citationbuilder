@@ -18,6 +18,7 @@ var app = {
 
             // set URL
             app.setURL();
+
         })
 
         app.setFormTypeFromUrl();
@@ -35,6 +36,7 @@ var app = {
             e.preventDefault();
         })
 
+        $('#clear-form').hide();
         // add clear form button
         $('#clear-form').click(function(e){
             var form = $('form.citation-form[data-csl="'+app.style+'"]:visible *');
@@ -112,6 +114,10 @@ var app = {
     setDropdowns : function(){
         $('#cite-select select').val(app.cite);
         $('#cite-style-select select').val(app.style);
+    },
+
+    handleClearButton : function(){
+        $('#clear-form').show();
     },
 
     activateCitationButtons : function(){
