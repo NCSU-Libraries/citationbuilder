@@ -155,7 +155,7 @@
         <if type="webpage post-weblog" match="any">
           <date variable="issued" delimiter=" ">
             <date-part name="month" prefix="Last modified " />
-            <date-part name="day" suffix=", " />
+            <date-part name="day" />
             <date-part name="year" />
           </date>
         </if>

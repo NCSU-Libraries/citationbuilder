@@ -6,6 +6,7 @@ var app = {
         $('#cite-select select').change(function(e){
             app.cite = $(this).val();
             app.loadForm();
+            c.readCookie();
 
             // set url
             app.setURL();
@@ -15,6 +16,7 @@ var app = {
         $('#cite-style-select select').change(function(e){
             app.style = $(this).val();
             app.loadForm();
+            c.readCookie();
 
             // set URL
             app.setURL();
@@ -32,37 +34,6 @@ var app = {
         // add contrib button
         $('.add-contributor a').click(function(e){
             app.addContributor();
-
-            e.preventDefault();
-        })
-
-        $('#clear-form').hide();
-        // add clear form button
-        $('#clear-form').click(function(e){
-            var form = $('form.citation-form[data-csl="'+app.style+'"]:visible *');
-
-            $(form).each(function(){
-                var type = $(this).attr('type');
-                var tag = $(this).prop('tagName');
-
-                if(type == 'text'){
-                    $(this).val('');
-                }
-
-                if(tag == 'SELECT'){
-                    $(this)[0].selectedIndex = 0;
-                }
-
-                // remove added contributors
-                if($(this).hasClass('contributor-container')){
-                    $(this).find('div.row.contributor').each(function(i){
-                        if(i > 0){
-                            $(this).remove();
-                        }
-                    })
-                }
-
-            });
 
             e.preventDefault();
         })
@@ -90,6 +61,7 @@ var app = {
         app.getCitation();
         app.handleCitationFields();
         app.handleDatePicker();
+        app.clearForm();
     },
 
     showForm : function(){
@@ -98,6 +70,49 @@ var app = {
 
     hideForm : function(){
         $('.citation-form').hide();
+    },
+
+    clearForm : function(){
+
+        if ($('form.citation-form[data-csl="'+app.style+'"] #clear-form').length==0) {
+            var clearBtn = '<p><a href="#" id="clear-form" class="button tiny disabled">Clear form</a></p>';
+            $('form.citation-form[data-csl="'+app.style+'"] input[type=submit]').parent().after(clearBtn);
+            app.initClearFormButton();
+        }
+
+    },
+
+    initClearFormButton : function(){
+        // init clear form button
+        $('form.citation-form[data-csl="'+app.style+'"] #clear-form').click(function(e){
+            c.string = [];
+            c.writeToCookie();
+
+            // clear actual fields
+            // var form = $('form.citation-form[data-csl="'+app.style+'"]:visible *');
+            var form = $('form.citation-form *');
+            $(form).each(function(){
+
+                var type = $(this).attr('type');
+                var tag = $(this).prop('tagName');
+                if(type == 'text'){
+                    $(this).val('');
+                }
+                if(tag == 'SELECT'){
+                    $(this)[0].selectedIndex = 0;
+                }
+                // remove added contributors
+                if($(this).hasClass('contributor-container')){
+                    $(this).find('div.row.contributor').each(function(i){
+                        if(i > 0){
+                            $(this).remove();
+                        }
+                    })
+                }
+            });
+
+            e.preventDefault();
+        })
     },
 
     setFormTypeFromUrl : function(){

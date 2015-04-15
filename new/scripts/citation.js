@@ -39,21 +39,22 @@ var cite = {
 	},
 
 	renderBib : function(){
-		// var bibDivs = document.getElementsByClassName('bib-div');
 
-	    // for (var i = 0, ilen = bibDivs.length; i < ilen; ++i) {
-	        // var bibDiv = bibDivs[i];
-	        var citeproc = cite.getProcessor(cite.csl);
-	        var itemIDs = [];
-	        for (var key in cite.citations) {
-	            itemIDs.push(key);
-	        }
-	        citeproc.updateItems(itemIDs);
-	        var bibResult = citeproc.makeBibliography();
-	        // var citationDiv = document.getElementById('citation-data');
-	        // citationDiv.innerHTML = bibResult[1].join('\n')
-	    // }
-	    return bibResult[1].join('\n');
+        var citeproc = cite.getProcessor(cite.csl);
+        var itemIDs = [];
+        for (var key in cite.citations) {
+            itemIDs.push(key);
+        }
+        citeproc.updateItems(itemIDs);
+        var bibResult = citeproc.makeBibliography();
+
+	    var bib = bibResult[1].join('\n');
+
+	    if(bib.indexOf('CSL STYLE ERROR') > 0){
+	    	return "You literally entered nothing into the form.";
+	    } else{
+	    	return bib;
+	    }
 	},
 
 	capitalise : function(str){

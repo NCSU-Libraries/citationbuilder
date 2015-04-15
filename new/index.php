@@ -13,6 +13,7 @@
     <script src="scripts/citation.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/data.js"></script>
+    <script src="scripts/data-storage.js"></script>
     <link rel="stylesheet" href="styles/app.css" />
 </head>
 <body>
@@ -32,6 +33,7 @@
                         <h1>Citation Builder</h1>
 
                         <?php include './includes/citation-select.php'; ?>
+
                         <div id="form-container">
                             <?php
                                 $csl_array = array('apa','chicago-author-date','council-of-science-editors-author-date','modern-language-association');
@@ -46,8 +48,6 @@
                                     print '</div>';
                                 }
                             ?>
-                            <p><a href="#" id="clear-form"><small>Clear form</small></a></p>
-
                         </div>
 
                         <div id="citation-modal" class="reveal-modal row" data-reveal data-reveal-id="citation-modal">
@@ -61,7 +61,7 @@
                             <li>American Psychological Association 6th edition</li>
                             <li>Modern Language Association 7th edition</li>
                             <li>Chicago Manual of Style 16th edition (author-date)</li>
-                            <li>Council of Science Editors, Name-Year (author-date)i</li>
+                            <li>Council of Science Editors, Name-Year (author-date)</li>
                         </ul>
 
 

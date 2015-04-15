@@ -12,12 +12,33 @@ var data = {
     activateForm : function(form){
         data.form = form;
         data.formData = $(form).serializeArray();
+
         data.csl = $(form).data('csl');
         data.json = data.buildJson();
 
         $('#citation-content').html(cite.init(data.json, data.csl));
         $('#citation-modal').foundation('reveal', 'open');
+        // data.selectText('csl-entry');
     },
+
+    // selectText : function(element) {
+    //     var doc = document
+    //         , text = doc.getElementsByClassName(element)
+    //         , range, selection
+    //     ;
+    //     console.log(text)
+    //     if (doc.body.createTextRange) {
+    //         range = document.body.createTextRange();
+    //         range.moveToElementText(text);
+    //         range.select();
+    //     } else if (window.getSelection) {
+    //         selection = window.getSelection();
+    //         range = document.createRange();
+    //         range.selectNodeContents(text);
+    //         selection.removeAllRanges();
+    //         selection.addRange(range);
+    //     }
+    // },
 
     buildJson : function(){
 
@@ -62,13 +83,12 @@ var data = {
                     json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
                 }
 
-                if(name == 'issued'){
+                if(name == 'issued' && val != ''){
                     var str = val.split('-');
                     json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
                 }
 
                 // month/year inputs
-
                 if(name == 'issued-mo' || name == 'issued-yr' || name == 'issued-dy'){
                     var year = $(data.form).find('input[name*="issued-yr"]').val();
                     var month = $(data.form).find('select[name*="issued-mo"]').val();
@@ -85,12 +105,11 @@ var data = {
                     }
 
                     json['Item-1']['issued'] = {'date-parts' : [dateObj]};
-
                 }
 
             }
         }
-        console.log(json);
+        // console.log(json);
         return json;
     }
 }

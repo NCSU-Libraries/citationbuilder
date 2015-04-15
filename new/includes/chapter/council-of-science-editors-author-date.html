@@ -1,5 +1,4 @@
 <form class="citation-form" data-csl="council-of-science-editors-author-date">
-<hr>
     <ul class="button-group unstyle-list citation">
         <li><a class="tiny button disabled active" data-citation="print" href="#">print</a></li>
         <li><a class="tiny button disabled" data-citation="digital" href="#">digital</a></li>
@@ -13,6 +12,29 @@
                     <select name="contributor">
                         <option value="author">Author</option>
                         <option value="editor">Editor</option>
+                        <option value="translator">Translator</option>
+                    </select>
+                </label>
+            </div>
+            <div class="columns medium-4 field print digital">
+                <label>First Name<input type="text" name="given" /></label>
+            </div>
+            <div class="columns medium-1 field print digital">
+                <label>MI<input type="text" name="givenMiddle" /></label>
+            </div>
+            <div class="columns medium-4 last-name field print digital">
+                <label>Last Name/Corp.<input type="text" name="family" /></label>
+            </div>
+            <div class="columns medium-1 field print digital">
+                <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
+            </div>
+        </div>
+        <div class="row contributor">
+            <div class="columns medium-2 field print digital">
+                <label for="author">Contributor
+                    <select name="contributor">
+                        <option value="editor">Editor</option>
+                        <option value="author">Author</option>
                         <option value="translator">Translator</option>
                     </select>
                 </label>
@@ -88,6 +110,9 @@
         </div>
     </div>
 
-
-    <input type="submit" value="Submit">
+    <div class="row" id="submit-area">
+        <div class="columns medium-2">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
 </form>

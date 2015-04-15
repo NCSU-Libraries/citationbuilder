@@ -1,6 +1,6 @@
 /*begin citation style chooser*/
 #citation-chooser{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 #cite-text{
     padding-right: 0px;
@@ -26,22 +26,69 @@
 }
 
 
-
+a#clear-form{
+    background: #555;
+    color: #fff;
+}
+@media only screen and (max-device-width: 768px){
+    a#clear-form{
+        margin-left: 15px;
+    }
+}
 
 /*begin forms*/
+#form-container{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
 .form-parent,
 .form-child{
     display: none;
 }
 .citation-form{}
+.citation-form .citation{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.citation-form .citation li{
 
+}
+/*.citation-form .citation li:first-child a{
+    border-left: 1px solid #ddd;
+    border-right: 0px;
+}*/
+.citation-form .citation li a{
+    border-bottom: 1px solid ##F5F5F5;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    opacity: 1;
+}
+.citation-form .citation li:first-child a.button{
+    /*margin-bottom: 0px;*/
+    border-left: 1px solid #ccc;
+}
+.citation-form .citation li a.button{
+    margin-bottom: 0px;
+    border-left: 0px solid #ccc;
+}
+.citation-form .citation li a.active{
+    border-bottom: 1px solid #fff;
+    border-left: 0px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-bottom: -1px;
+}
+.citation-form .citation li:first-child a.active{
+    border-left: 1px solid #ccc;
+}
 .citation-form select{
     margin-bottom: 1rem;
 }
 
 .citation-form .button.active.disabled{
-    background: #cc0000;
-    color: #FFF;
+    background: #FFF;
+    /*color: #FFF;*/
 }
 .citation-form .button.disabled{
     background: #F5f5f5;
