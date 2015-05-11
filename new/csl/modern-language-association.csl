@@ -414,7 +414,7 @@
           <group prefix=" " suffix="." delimiter=": ">
             <group delimiter=" ">
               <text macro="editor-translator" suffix="."/>
-              <text variable="container-title" font-style="italic"/>
+              <text variable="container-title" font-style=""/>
               <choose>
                 <if type="article-journal">
                   <group delimiter=" ">

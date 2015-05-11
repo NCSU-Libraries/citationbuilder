@@ -7,7 +7,6 @@
 <head>
     <title>Citation Builder | NCSU Libraries</title>
     <!--#include virtual="/sites/all/themes/ncsulib_foundation/templates/includes/head.html" -->
-    <!-- // <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <script type="text/javascript" src="./citeproc-js/xmldom.js"></script>
     <script type="text/javascript" src="./citeproc-js/citeproc.js"></script>
     <script src="scripts/citation.js"></script>
@@ -48,12 +47,15 @@
                                     print '</div>';
                                 }
                             ?>
+                            <p><small>Miss the old <a href="/citationbuilder">Citation Builder?</a></small></p>
                         </div>
+
 
                         <div id="citation-modal" class="reveal-modal row" data-reveal data-reveal-id="citation-modal">
                             <div id="citation-content"></div>
                             <a class="close-reveal-modal">&#215;</a>
                         </div>
+
 
                         <p>The Citation Builder is based on the following citation manuals:</p>
 
