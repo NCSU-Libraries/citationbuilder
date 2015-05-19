@@ -1,0 +1,177 @@
+/*begin citation style chooser*/
+#citation-chooser{
+    margin-bottom: 30px;
+}
+#cite-text{
+    padding-right: 0px;
+}
+#cite-text p{
+    padding-top: 5px;
+}
+@media only screen and (min-device-width: 768px){
+    #cite-select{
+        padding-left: 0px;
+    }
+    #cite-select select{}
+    #cite-style-text{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #cite-style-select{
+        padding-left: 0px;
+    }
+}
+#cite-style-text p{
+    padding-top: 5px;
+}
+
+
+a#clear-form{
+    background: #555;
+    color: #fff;
+}
+@media only screen and (max-device-width: 768px){
+    a#clear-form{
+        margin-left: 15px;
+    }
+}
+
+/*begin forms*/
+#form-container{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+.form-parent,
+.form-child{
+    display: none;
+}
+.citation-form{}
+.citation-form .citation{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.citation-form .citation li{
+
+}
+/*.citation-form .citation li:first-child a{
+    border-left: 1px solid #ddd;
+    border-right: 0px;
+}*/
+.citation-form .citation li a{
+    border-bottom: 1px solid ##F5F5F5;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    opacity: 1;
+}
+.citation-form .citation li:first-child a.button{
+    /*margin-bottom: 0px;*/
+    border-left: 1px solid #ccc;
+}
+.citation-form .citation li a.button{
+    margin-bottom: 0px;
+    border-left: 0px solid #ccc;
+}
+.citation-form .citation li a.active{
+    border-bottom: 1px solid #fff;
+    border-left: 0px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-bottom: -1px;
+}
+.citation-form .citation li:first-child a.active{
+    border-left: 1px solid #ccc;
+}
+.citation-form select{
+    margin-bottom: 1rem;
+}
+
+.citation-form .button.active.disabled{
+    background: #FFF;
+    /*color: #FFF;*/
+}
+.citation-form .button.disabled{
+    background: #F5f5f5;
+    border-color: #ccc;
+    color: #555;
+}
+@media only screen and (min-device-width: 768px){
+    .last-name{
+        padding-right: 0px;
+    }
+    .add-contributor{
+        position: relative;
+        top: -46px;
+    }
+    .add-contributor a{
+        color: #555;
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-device-width: 768px){
+    .add-contributor{
+        margin-bottom: 30px;
+    }
+    .add-contributor a{
+        color: #555;
+        font-size: 3rem;
+    }
+}
+.add-contributor.active{
+    position: relative;
+    top: 0px;
+}
+@media only screen and (min-device-width: 768px){
+    .remove-contributor{
+        position: relative;
+        top: 28px;
+    }
+}
+.remove-contributor a{
+    color: #555;
+    font-size: 1.5rem;
+}
+@media only screen and (max-device-width: 768px){
+    .remove-contributor{
+        margin-bottom: 30px;
+    }
+    .remove-contributor a{
+        font-size: 3rem;
+    }
+}
+
+.clipboard{
+    margin-top: 20px;
+}
+.clipboard p{
+    font-size: 0.7rem;
+}
+
+@media only screen and (min-device-width: 768px){
+    #citation-modal.reveal-modal{
+        left: 0px;
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .csl-entry{
+        line-height: 1.4rem;
+    }
+}
+
+@media only screen and (max-device-width: 768px){
+    #citation-modal.reveal-modal{
+        left: 0px;
+        height: auto;
+        margin-left: 5%;
+        min-height: 1px;
+        width: 90%;
+    }
+
+    .csl-entry{
+        line-height: 1.4rem;
+        width: 90%;
+    }
+
+    input[type='text'],input[type='number'],textarea, select {font-size:16px !important;}
+}

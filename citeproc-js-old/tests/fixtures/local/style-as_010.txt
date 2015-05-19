@@ -1,0 +1,39 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry"><span style="font-variant:small-caps;">Smith</span>, <span style="font-variant:small-caps;">M.J.</span> 1983. <i>The microbial ecology of sub-Antarctic tundra soils</i>. PhD thesis, University of Surrey, 256 pp. [Unpublished].</div>
+</div>
+<<===== RESULT===== <<
+
+>>===== CSL =====>>
+antarctic-science.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 17,
+    "type": "thesis",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "The microbial ecology of sub-Antarctic tundra soils",
+    "publisher": "University of Surrey",
+    "number-of-pages": "256",
+    "genre": "PhD thesis",
+    "note": "{:status: Unpublished}",
+	"issued": {
+      "date-parts": [[1983]]
+	},
+    "author": [
+      {
+        "family": "Smith",
+        "given": "M. J."
+      }
+    ]
+  }
+]
+<<===== INPUT===== <<

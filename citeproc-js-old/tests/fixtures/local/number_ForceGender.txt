@@ -1,0 +1,53 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+Both number and chapter-number have the same default gender in this example (feminine, I think)
+default(chapter-number): 1<sup>e</sup>
+forced to masculine(number): 1<sup>e</sup><sup>r</sup>
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.0"
+      default-locale="fr">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation>
+    <layout>
+      <group delimiter="&#x0A;">
+        <text value="Both number and chapter-number have the same default gender in this example (feminine, I think)"/>
+        <group delimiter=" ">
+          <text value="default(chapter-number):"/>
+          <number form="ordinal" variable="chapter-number"/>
+        </group>
+        <group delimiter=" ">
+          <text value="forced to masculine(number):"/>
+          <number gender="masculine" form="ordinal" variable="number"/>
+        </group>
+      </group>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "id": "ITEM-1", 
+        "chapter-number": "1",
+        "number": "1",
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

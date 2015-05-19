@@ -1,0 +1,56 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry">De White, E. G. (2008). <i>Patriarcas y profetas</i>. (Staff de la ACES, Trans., A. D. Orrego, Ed.) (Quinta edición.). Buenos Aires: Asociación Casa Editora Sudamericana.</div>
+</div>
+<<===== RESULT =====<<
+
+
+>>===== CITATIONS =====>>
+[
+    [
+        {
+            "citationID": "CITATION-1", 
+            "citationItems": [
+                {
+                    "id": "0"
+                }
+            ], 
+            "properties": {
+                "noteIndex": 1
+            }
+        }, 
+        [], 
+        []
+    ]
+]
+<<===== CITATIONS =====<<
+
+
+>>===== CSL =====>>
+apa-latest.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+  {
+    "id": "0",
+    "type":"book",
+    "author":[{"family":"de White","given":"Elena G."}],
+    "title":"Patriarcas y profetas",
+    "issued":{"date-parts":[["2008"]]},
+    "editor":[{"family":"Orrego","given":"Aldo D."}],
+    "edition":"Quinta edición",
+    "keyword":"Patriarcas bíblicos.;Patriarchs (Bible).;Profetas.;Prophets.",
+    "publisher-place":"Buenos Aires",
+    "publisher":"Asociación Casa Editora Sudamericana",
+    "translator":[{"family":"Staff de la ACES","isInstitution":true}]
+  }
+]
+<<===== INPUT =====<<

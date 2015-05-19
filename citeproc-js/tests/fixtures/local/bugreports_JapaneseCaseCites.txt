@@ -1,0 +1,89 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+>>===== CITATIONS =====>>
+[
+    [
+        {
+            "citationID": "CITATION-1", 
+            "citationItems": [
+                {
+                    "id": "ITEM-1"
+                },
+                {
+                    "id": "ITEM-2"
+                }
+            ], 
+            "properties": {
+                "noteIndex": 1
+            }
+        }, 
+        [], 
+        []
+    ]
+]
+<<===== CITATIONS =====<<
+
+
+
+>>===== RESULT =====>>
+>>[0] Osaka District Court, January 29, 1999, <i>Rouhan</i>, 760, p. 61; Tokyo District Court, February 30, 2000, <i>Rouhan</i>, 1760, p. 161.
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+mlz-cms-full.csl
+<<===== CSL =====<<
+
+>>===== OPTIONS =====>>
+{
+        "static_statute_locator":"true",
+        "clobber_locator_if_no_statute_section":"false",
+        "handle_parallel_articles":"true",
+        "main_title_from_short_title":"true"
+}
+<<===== OPTIONS =====<<
+
+
+>>===== INPUT =====>>
+[
+	{
+		"id": "ITEM-1",
+		"type": "legal_case",
+		"container-title": "Rouhan",
+		"authority": "Osaka District Court",
+		"page": "61",
+		"volume": "760",
+		"jurisdiction": "jp",
+		"issued": {
+			"date-parts": [
+				[
+					1999,
+					1,
+					29
+				]
+			]
+		}
+	},
+	{
+		"id": "ITEM-2",
+		"type": "legal_case",
+		"container-title": "Rouhan",
+		"authority": "Tokyo District Court",
+		"page": "161",
+		"volume": "1760",
+		"jurisdiction": "jp",
+		"issued": {
+			"date-parts": [
+				[
+					2000,
+					2,
+					30
+				]
+			]
+		}
+	}
+]
+<<===== INPUT =====<<

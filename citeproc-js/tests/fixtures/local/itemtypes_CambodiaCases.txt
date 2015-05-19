@@ -1,0 +1,101 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+
+>>===== RESULT =====>>
+>>[0] Arbitration Council (Kh.), case no. 123/09, October 2, 2009.
+..[1] <i>Some Book</i>, n.d.
+>>[2] Case no. 123/09, October 2, 2009.
+<<===== RESULT =====<<
+
+
+>>===== CITATIONS =====>>
+[
+    [
+        {
+            "citationID": "CITATION-1", 
+            "citationItems": [
+                {
+                    "id": "ITEM-1"
+                }
+             ], 
+            "properties": {
+                "noteIndex": 1
+            }
+        }, 
+        [], 
+        []
+    ],
+    [
+        {
+            "citationID": "CITATION-2", 
+            "citationItems": [
+                {
+                    "id": "ITEM-2"
+                }
+             ], 
+            "properties": {
+                "noteIndex": 2
+            }
+        }, 
+        [["CITATION-1",1]], 
+        []
+    ],
+    [
+        {
+            "citationID": "CITATION-3", 
+            "citationItems": [
+                {
+                    "id": "ITEM-1"
+                }
+             ], 
+            "properties": {
+                "noteIndex": 3
+            }
+        }, 
+        [["CITATION-1",1],["CITATION-2",2]], 
+        []
+    ]
+]
+<<===== CITATIONS =====<<
+
+
+>>===== CSL =====>>
+mlz-cms-full.csl
+<<===== CSL =====<<
+
+
+>>===== ABBREVIATIONS =====>>
+{
+   "default": {
+        "place":{
+           "kh": "Kh."
+        }
+   }
+}
+<<===== ABBREVIATIONS =====<<
+
+
+
+>>===== INPUT =====>>
+[
+    {
+        "title": "Whamo Corporation",
+        "authority": "Arbitration Council",
+        "jurisdiction": "kh",
+        "number": "123/09",
+        "issued": {
+            "date-parts": [[2009, 10, 2]]
+        },
+        "id": "ITEM-1", 
+        "type": "legal_case"
+    }, 
+    {
+        "title": "Some Book",
+        "id": "ITEM-2", 
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

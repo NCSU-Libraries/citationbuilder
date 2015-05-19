@@ -1,0 +1,152 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+This test is requesting en-US as the default locale, and transliteration
+with the my-alalc97 language tag.
+
+The items test the following:
+
+ITEM-1: "en" item with no matching transliteration
+    Apply normal formatting to name
+
+ITEM-2: "en" item with match on explicit tag for headline field
+    Apply "my" formatting (sort ordering, full name)
+
+ITEM-3: "en" item with match on subfield tag
+    Apply "my" formatting (sort ordering, full name)
+
+ITEM-4: "en" item with non-romanesque content and no tag match
+    Apply processor's hard-wired non-romanesque formatting to name (sort ordering, short form ok)
+
+ITEM-5: "my" item with no tag match
+    Apply "my" formatting (sort ordering, full name)
+
+ITEM-6: "fr" item (alien language) and no tag match
+    Apply normal formatting to name
+
+
+>>===== RESULT =====>>
+Family Name; Family Name Given Name; Kyaw Zay Ya U; ဦး; Family Name Given Name; Family Name
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+<style 
+      xmlns="http://purl.org/net/xbiblio/csl"
+      class="note"
+      version="1.0"
+      default-locale="en-US-x-translit-my-alalc97">
+  <info>
+    <id />
+    <title />
+    <updated>2009-08-10T04:49:00+09:00</updated>
+  </info>
+  <citation>
+    <layout delimiter="; ">
+      <names variable="author">
+        <name form="short"/>
+      </names>
+    </layout>
+  </citation>
+</style>
+<<===== CSL =====<<
+
+
+
+
+>>===== INPUT =====>>
+[
+    {
+        "author": [
+            {
+                "family": "Family Name",
+                "given": "Given Name",
+                "multi":{
+                  "_key":{
+				    "ja-alalc97":{
+               	      "family": "Kyaw Zay Ya",
+					  "given": "U"
+					}
+                  }
+				}
+			}
+        ],
+        "id": "ITEM-1", 
+        "language": "en",
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "Family Name",
+                "given": "Given Name",
+                "multi":{
+                  "main": "my-alalc97",
+                  "_key":{
+				    "ja-alalc97":{
+               	      "family": "Kyaw Zay Ya",
+					  "given": "U"
+					}
+                  }
+				}
+			}
+        ],
+        "id": "ITEM-2", 
+        "language": "en",
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "Family Name",
+                "given": "Given Name",
+                "multi":{
+                  "_key":{
+				    "my-alalc97":{
+               	      "family": "Kyaw Zay Ya",
+					  "given": "U"
+					}
+                  }
+				}
+			}
+        ],
+        "id": "ITEM-3", 
+        "language": "en",
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "ဦး",
+                "given": "ေက်ာ္ေဇယ်"
+			}
+        ],
+        "id": "ITEM-4", 
+        "language": "en",
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "Family Name",
+                "given": "Given Name"
+			}
+        ],
+        "id": "ITEM-5", 
+        "language": "my",
+        "type": "book"
+    },
+    {
+        "author": [
+            {
+                "family": "Family Name",
+                "given": "Given Name"
+			}
+        ],
+        "id": "ITEM-6", 
+        "language": "fr-FR",
+        "type": "book"
+    }
+]
+<<===== INPUT =====<<

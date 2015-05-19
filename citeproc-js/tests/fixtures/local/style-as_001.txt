@@ -1,0 +1,44 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry"><span style="font-variant:small-caps;">Cantrill</span>, <span style="font-variant:small-caps;">D.J.</span> 2000. A new macroflora from the South Orkney Islands, Antarctica: evidence of an Early to Middle Jurassic age for the Powell Island Conglomerate. <i>Antarctic Science</i>, <b>12</b>:02, 185–195.</div>
+</div>
+<<===== RESULT===== <<
+
+>>===== CSL =====>>
+antarctic-science.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 6,
+    "type": "article-journal",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "A new macroflora from the South Orkney Islands, Antarctica: evidence of an Early to Middle Jurassic age for the Powell Island Conglomerate",
+    "container-title": "Antarctic Science",
+    "page": "185-195",
+    "volume": "12",
+    "issue": "02",
+    "shortTitle": "A new macroflora from the South Orkney Islands, Antarctica",
+    "author": [
+      {
+        "family": "Cantrill",
+        "given": "D. J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    }
+  }
+]
+<<===== INPUT===== <<

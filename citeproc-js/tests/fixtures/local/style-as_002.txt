@@ -1,0 +1,71 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry"><span style="font-variant:small-caps;">Thrush</span>, <span style="font-variant:small-caps;">S.</span>, <span style="font-variant:small-caps;">Dayton</span>, <span style="font-variant:small-caps;">P.</span>, <span style="font-variant:small-caps;">Cattaneo-Vietti</span>, <span style="font-variant:small-caps;">R.</span>, <span style="font-variant:small-caps;">Chiantore</span>, <span style="font-variant:small-caps;">M.</span>, <span style="font-variant:small-caps;">Cummings</span>, <span style="font-variant:small-caps;">V.</span>, <span style="font-variant:small-caps;">Andrew</span>, <span style="font-variant:small-caps;">N.</span>, <span style="font-variant:small-caps;">Hawes</span>, <span style="font-variant:small-caps;">I.</span>, <span style="font-variant:small-caps;">Kim</span>, <span style="font-variant:small-caps;">S.</span>, <span style="font-variant:small-caps;">Kvitek</span>, <span style="font-variant:small-caps;">R.</span> &#38; <span style="font-variant:small-caps;">Schwarz</span>, <span style="font-variant:small-caps;">A.M.</span> In press. Broad-scale factors influencing the biodiversity of coastal benthic communities of the Ross Sea. <i>Deep Sea Research Part II: Topical Studies in Oceanography</i>.</div>
+</div>
+
+<<===== RESULT===== <<
+
+>>===== CSL =====>>
+antarctic-science.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 9,
+    "type": "article-journal",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "Broad-scale factors influencing the biodiversity of coastal benthic communities of the Ross Sea",
+    "container-title": "Deep Sea Research Part II: Topical Studies in Oceanography",
+    "note": "{:status: in press}",
+    "author": [
+      {
+        "family": "Thrush",
+        "given": "S."
+      },
+      {
+        "family": "Dayton",
+        "given": "P."
+      },
+      {
+        "family": "Cattaneo-Vietti",
+        "given": "R."
+      },
+      {
+        "family": "Chiantore",
+        "given": "M."
+      },
+      {
+        "family": "Cummings",
+        "given": "V."
+      },
+      {
+        "family": "Andrew",
+        "given": "N."
+      },
+      {
+        "family": "Hawes",
+        "given": "I."
+      },
+      {
+        "family": "Kim",
+        "given": "S."
+      },
+      {
+        "family": "Kvitek",
+        "given": "R."
+      },
+      {
+        "family": "Schwarz",
+        "given": "A. M"
+      }
+    ]
+  }
+]
+<<===== INPUT===== <<

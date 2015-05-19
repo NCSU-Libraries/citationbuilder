@@ -1,0 +1,66 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+Failing parallel collapse in New Zealand Law style
+
+
+>>===== RESULT =====>>
+<i>Smith v Jones</i> (2010) 20 XVC 33, 10 DDR 23.
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+mlz-new-zealand-law.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+   {
+      "id": "ITEM-1",
+      "type": "legal_case",
+      "title": "Smith v. Jones",
+      "container-title": "XVC",
+      "page": "33",
+      "volume": "20",
+      "note": "{:jurisdiction:nz}",
+      "author": [
+         {
+            "family": "High Court",
+            "isInstitution": "true"
+         }
+      ],
+      "issued": {
+         "date-parts": [
+            [
+               2010
+            ]
+         ]
+      }
+   },
+   {
+      "id": "ITEM-2",
+      "type": "legal_case",
+      "title": "Smith v. Jones",
+      "container-title": "DDR",
+      "page": "23",
+      "volume": "10",
+      "note": "{:jurisdiction:nz}",
+      "author": [
+         {
+            "family": "High Court",
+            "isInstitution": "true"
+         }
+      ],
+      "issued": {
+         "date-parts": [
+            [
+               2010
+            ]
+         ]
+      }
+   }
+]
+<<===== INPUT =====<<

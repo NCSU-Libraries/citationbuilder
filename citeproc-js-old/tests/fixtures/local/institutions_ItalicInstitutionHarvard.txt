@@ -1,0 +1,69 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+
+In processor development before proper deployment, I fancied that is
+would be desirable to drop the institutional element of the first
+author name in the test below.
+
+It's not clear whether that is really the case (in the eyes of people
+actually in charge of editing), so at the deployment stage, let's open
+this up to include institutional names, and restrict the behavior
+selectively if there are requests to do so.
+
+
+>>===== RESULT =====>>
+(Doe, <i>Facebook</i> 2000; <i>Facebook</i> 2000)
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+harvard1-institution-italic.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+    {
+        "id": "ITEM-1",
+        "author": [
+            {
+                "literal": "Facebook"
+            }
+        ], 
+		"title": "My amazing institutional experience",
+		"issued": {
+			"date-parts": [
+				[ 
+			  	  2000
+				]
+			]
+		},
+		"URL": "http://facebook.com/page/address",
+        "type": "webpage"
+    },
+    {
+        "id": "ITEM-2",
+        "author": [
+            {
+                "family": "Doe",
+                "given": "John"
+            },
+            {
+                "literal": "Facebook"
+            }
+        ], 
+		"title": "My amazing personal experience",
+		"issued": {
+			"date-parts": [
+				[ 
+			  	  2000
+				]
+			]
+		},
+		"URL": "http://facebook.com/page/address",
+        "type": "webpage"
+    }
+]
+<<===== INPUT =====<<

@@ -1,0 +1,50 @@
+>>===== MODE =====>>
+bibliography
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+<div class="csl-bib-body">
+  <div class="csl-entry"><span style="font-variant:small-caps;">Van den</span> <span style="font-variant:small-caps;">Broeke</span>, <span style="font-variant:small-caps;">M.R.</span>, <span style="font-variant:small-caps;">Reijmer</span>, <span style="font-variant:small-caps;">C.H.</span> &#38; <span style="font-variant:small-caps;">Van der</span> <span style="font-variant:small-caps;">Wal</span>, <span style="font-variant:small-caps;">R.S.W.</span> 2004. Surface radiation balance in Antarctica as measured with automatic weather stations. <i>Journal of Geophysical Research</i>, <b>109</b>, 10.1029/2003JD004394.</div>
+</div>
+<<===== RESULT===== <<
+
+>>===== CSL =====>>
+antarctic-science.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 12,
+    "type": "article-journal",
+    "multi": {
+      "_keys": {}
+    },
+    "title": "Surface radiation balance in Antarctica as measured with automatic weather stations",
+    "container-title": "Journal of Geophysical Research",
+    "volume": "109",
+    "DOI": "10.1029/2003JD004394",
+    "author": [
+      {
+        "family": "Van den Broeke",
+        "given": "M. R."
+      },
+      {
+        "family": "Reijmer",
+        "given": "C. H."
+      },
+      {
+        "family": "Van der Wal",
+        "given": "R. S. W."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2004
+        ]
+      ]
+    }
+  }
+]
+<<===== INPUT===== <<

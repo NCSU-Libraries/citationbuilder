@@ -1,0 +1,80 @@
+>>===== MODE =====>>
+citation
+<<===== MODE =====<<
+
+>>===== ABBREVIATIONS =====>>
+{
+  "default": {
+    "place": {
+      "au.int": "A.U."
+     }
+  }
+}
+<<===== ABBREVIATIONS =====<<
+
+
+>>===== OPTIONS =====>>
+{
+  "static_statute_locator":true,
+  "clobber_locator_if_no_statute_section":false,
+  "handle_parallel_articles":true,
+  "main_title_from_short_title":true
+}
+<<===== OPTIONS =====<<
+
+
+>>===== CITATIONS =====>>
+[
+    [
+        {
+            "citationID": "CITATION-1", 
+            "citationItems": [
+                {
+                    "id": "ITEM-1",
+                    "label":"paragraph",
+                    "locator":"99"
+                }
+            ], 
+            "properties": {
+                "noteIndex": 1
+            }
+        }, 
+        [], 
+        []
+    ]
+]
+<<===== CITATIONS =====<<
+
+
+>>===== RESULT =====>>
+>>[0] African Union, Peace and Security Council, <i>Report of the African Union High-Level Panel on Darfur (AUPD)</i>, 207th Meeting at the Level of the Heads of State and Government, A.U. Doc. PSC/AHG/2(CCVII), October 29, 2009, para. 99.
+<<===== RESULT =====<<
+
+
+>>===== CSL =====>>
+test-cms.csl
+<<===== CSL =====<<
+
+
+>>===== INPUT =====>>
+[
+	{
+		"id": "ITEM-1",
+		"type": "report",
+		"title": "Report of the African Union High-Level Panel on Darfur (AUPD)",
+		"collection-title": "207th Meeting at the Level of the Heads of State and Government",
+		"authority": "African Union|Peace and Security Council",
+		"archive_location": "PSC/AHG/2(CCVII)",
+		"jurisdiction": "au.int",
+		"issued": {
+			"date-parts": [
+				[
+					"2009",
+					10,
+					29
+				]
+			]
+		}
+	}
+]
+<<===== INPUT =====<<

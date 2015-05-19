@@ -1,0 +1,51 @@
+>>===== MODE =====>>
+citation
+<<===== MODE===== <<
+
+>>===== RESULT =====>>
+>>[0] “Hello,” in <i>This is a pen.</i>
+<<===== RESULT===== <<
+
+>>===== CITATIONS =====>>
+[
+  [
+    {
+      "citationID": "1necv8vpj7",
+      "properties": {
+        "noteIndex": 1,
+        "index": 0
+      },
+      "citationItems": [
+        {
+          "id": 246
+        }
+      ],
+      "schema": "https://github.com/citation-style-language/schema/raw/master/csl-citation.json"
+    },
+    [],
+    []
+  ]
+]
+<<===== CITATIONS===== <<
+
+>>===== CSL =====>>
+chicago-fullnote-bibliography.csl
+<<===== CSL===== <<
+
+>>===== INPUT =====>>
+[
+  {
+    "id": 246,
+    "type": "chapter",
+    "multi": {
+      "_keys": {
+        "title": {
+          "ja-alalc97": "Hiya"
+        }
+      }
+    },
+    "title": "Hello",
+    "container-title": "This is a pen."
+  }
+]
+<<===== INPUT===== <<
