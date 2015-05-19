@@ -13,7 +13,13 @@ CONTENTS OF THIS FILE
 ABOUT CITATION BUILDER
 ---------------------------------------
 
-Citation Builder is a web-based tool designed to quickly and easily generate citations for sources consulted during the research process. While powerful tools such as RefWorks, Zotero, and Endnote exist to generate citations, understanding how to use these tools can require an investment of time. Citation Builder is an attempt to provide a low-barrier method for users to generate citations for commonly consulted source media in either APA (American Psychological Association), MLA (Modern Language Association) formats, Chicago (Chicago Manual of Style 16th Edition) or CSE (Council of Science Editors).
+Citation Builder is a web-based tool designed to quickly and easily generate citations for sources consulted during the research process. While powerful tools such as RefWorks, Zotero, and Endnote exist to generate citations, understanding how to use these tools can require an investment of time. Citation Builder is an attempt to provide a low-barrier method for users to generate citations for commonly consulted source media. The formats include:
+
+    American Psychological Association 6th edition
+    Modern Language Association 7th edition
+    Chicago Manual of Style 16th edition (author-date)
+    Council of Science Editors, Name-Year (author-date)
+
 
 For more information, visit our Github space at: https://github.com/NCSU-Libraries/citation-builder or the North Carolina State University project page at: http://www.lib.ncsu.edu/dli/projects/citationbuilder/
 
