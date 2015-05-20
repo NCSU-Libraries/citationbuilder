@@ -192,7 +192,9 @@ var app = {
     },
 
     addContributor : function(){
-        $(app.form+' .contributor-container').append($('.contributor')[0].outerHTML);
+        // console.log($('.contributor')[0].outerHTML)
+        var contr_html = $(app.form+' .contributor-container .contributor')[0].outerHTML;
+        $(app.form+' .contributor-container').append(contr_html);
 
         app.countContributor();
         app.activateContributorButtons();
