@@ -414,7 +414,7 @@
           <group prefix=" " suffix="." delimiter=": ">
             <group delimiter=" ">
               <text macro="editor-translator" suffix="."/>
-              <text variable="container-title" font-style=""/>
+              <text variable="container-title" font-style="italic"/>
               <choose>
                 <if type="article-journal">
                   <group delimiter=" ">
@@ -439,7 +439,7 @@
                     <choose>
                       <if variable="URL DOI" match="any">
                         <text variable="page" prefix=": "/>
-                        <text variable="archive_location" prefix=". " />
+                        <text variable="archive_location" font-style="italic" prefix=". " />
                       </if>
                       <else>
                         <text macro="pages" prefix=": "/>
