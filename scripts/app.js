@@ -10,6 +10,9 @@ var app = {
 
             // set url
             app.setURL();
+
+            // analytics
+            app.logAnalytics();
         })
 
         // citation style select
@@ -20,6 +23,9 @@ var app = {
 
             // set URL
             app.setURL();
+
+            // analytics
+            app.logAnalytics();
 
         })
 
@@ -233,6 +239,13 @@ var app = {
 
             $(this).fdatepicker('show');
         })
+    },
+
+    logAnalytics : function(){
+         // google analytics
+            app.citeText = $('#cite-select select option:selected').text();
+            app.citeStyleText = $('#cite-style-select select option:selected').text();
+            ga('send', 'event', 'CitationBuilder', app.citeStyleText, app.citeText);
     }
 }
 
