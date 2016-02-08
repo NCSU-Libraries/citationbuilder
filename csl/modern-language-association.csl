@@ -422,7 +422,7 @@
                       <text variable="volume"/>
                       <text variable="issue"/>
                     </group>
-                    <date variable="issued" prefix="" suffix=":">
+                    <date variable="issued" prefix="(" suffix="):" >
                       <date-part name="year"/>
                     </date>
                   </group>

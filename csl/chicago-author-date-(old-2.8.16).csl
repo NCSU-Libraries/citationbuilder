@@ -24,7 +24,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>The author-date variant of the Chicago style</summary>
-    <updated>2015-12-16T02:32:01+00:00</updated>
+    <updated>2014-10-03T06:48:15+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -42,16 +42,10 @@
   <macro name="secondary-contributors">
     <choose>
       <if type="chapter paper-conference" match="none">
-        <group delimiter=". ">
-          <names variable="editor translator" delimiter=". ">
-            <label form="verb" text-case="capitalize-first" suffix=" "/>
-            <name and="text" delimiter=", "/>
-          </names>
-          <names variable="director" delimiter=". ">
-            <label form="verb" text-case="capitalize-first" suffix=" "/>
-            <name and="text" delimiter=", "/>
-          </names>
-        </group>
+        <names variable="editor translator" delimiter=". ">
+          <label form="verb" text-case="capitalize-first" suffix=" "/>
+          <name and="text" delimiter=", "/>
+        </names>
       </if>
     </choose>
   </macro>
@@ -103,7 +97,7 @@
   </macro>
   <macro name="substitute-title">
     <choose>
-      <if type="article-magazine article-newspaper review review-book" match="any">
+      <if type="article-journal article-magazine article-newspaper review review-book" match="any">
         <text macro="container-title"/>
       </if>
     </choose>
@@ -116,7 +110,6 @@
         <substitute>
           <names variable="editor"/>
           <names variable="translator"/>
-          <names variable="director"/>
           <text macro="substitute-title"/>
           <text macro="title"/>
         </substitute>
@@ -130,7 +123,6 @@
       <substitute>
         <names variable="editor"/>
         <names variable="translator"/>
-        <names variable="director"/>
         <text macro="substitute-title"/>
         <text macro="title"/>
       </substitute>
@@ -162,8 +154,9 @@
       <choose>
         <if type="webpage post-weblog" match="any">
           <date variable="issued" delimiter=" ">
-            <date-part name="month"/>
-            <date-part name="day"/>
+            <date-part name="month" prefix="Last modified " />
+            <date-part name="day" />
+            <date-part name="year" />
           </date>
         </if>
       </choose>
@@ -201,7 +194,7 @@
           </if>
         </choose>
       </if>
-      <else-if type="bill book graphic legislation motion_picture song" match="any">
+      <else-if type="bill book graphic legislation motion_picture report song" match="any">
         <text variable="title" text-case="title" font-style="italic"/>
         <group prefix=" (" suffix=")" delimiter=" ">
           <text term="version"/>
@@ -209,31 +202,15 @@
         </group>
       </else-if>
       <else-if variable="reviewed-author">
-        <choose>
-          <if variable="reviewed-title">
-            <group delimiter=". ">
-              <text variable="title" text-case="title" quotes="true"/>
-              <group delimiter=", ">
-                <text variable="reviewed-title" text-case="title" font-style="italic" prefix="Review of "/>
-                <names variable="reviewed-author">
-                  <label form="verb-short" text-case="lowercase" suffix=" "/>
-                  <name and="text" delimiter=", "/>
-                </names>
-              </group>
-            </group>
-          </if>
-          <else>
-            <group delimiter=", ">
-              <text variable="title" text-case="title" font-style="italic" prefix="Review of "/>
-              <names variable="reviewed-author">
-                <label form="verb-short" text-case="lowercase" suffix=" "/>
-                <name and="text" delimiter=", "/>
-              </names>
-            </group>
-          </else>
-        </choose>
+        <group delimiter=", ">
+          <text variable="title" font-style="italic" prefix="Review of "/>
+          <names variable="reviewed-author">
+            <label form="verb-short" text-case="lowercase" suffix=" "/>
+            <name and="text" delimiter=", "/>
+          </names>
+        </group>
       </else-if>
-      <else-if type="legal_case interview patent" match="any">
+      <else-if type="legal_case interview" match="any">
         <text variable="title"/>
       </else-if>
       <else>
@@ -252,11 +229,11 @@
             </group>
           </if>
           <else>
-            <text variable="edition" text-case="capitalize-first" prefix=". "/>
+            <text variable="edition" prefix=". "/>
           </else>
         </choose>
       </if>
-      <else-if type="chapter paper-conference" match="any">
+      <else-if type="chapter  paper-conference" match="any">
         <choose>
           <if is-numeric="edition">
             <group delimiter=" " prefix=", ">
@@ -276,11 +253,11 @@
       <if type="article-journal">
         <choose>
           <if variable="volume">
-            <text variable="volume" prefix=" "/>
-            <group prefix=" (" suffix=")">
+            <text variable="volume" prefix=" " suffix=","/>
+            <group prefix=" " suffix="">
               <choose>
                 <if variable="issue">
-                  <text variable="issue"/>
+                  <text variable="issue" prefix="no. "/>
                 </if>
                 <else>
                   <date variable="issued">
@@ -353,9 +330,9 @@
     <choose>
       <if type="article-newspaper">
         <group prefix=", " delimiter=", ">
-          <group delimiter=" ">
-            <text variable="edition"/>
-            <text term="edition"/>
+          <group>
+            <text variable="edition" suffix=" "/>
+            <text term="edition" prefix=" "/>
           </group>
           <group>
             <text term="section" form="short" suffix=" "/>
@@ -437,47 +414,26 @@
   <macro name="date">
     <choose>
       <if variable="issued">
-        <group delimiter=" ">
-          <date variable="original-date" form="text" date-parts="year" prefix="(" suffix=")"/>
-          <date variable="issued">
-            <date-part name="year"/>
-          </date>
-        </group>
+        <date variable="issued">
+          <if type="article-journal">
+            <date-part name="year" prefix="(" suffix=")"/>
+          </if>
+          <else-if type="webpage">
+
+          </else-if>
+          <else-if type="article-magazine">
+            <date-part prefix=" " name="year"/>
+          </else-if>
+          <else>
+            <date-part prefix=", " name="year"/>
+          </else>
+        </date>
       </if>
       <else-if variable="accessed">
         <date variable="accessed">
           <date-part name="year"/>
         </date>
       </else-if>
-      <else-if variable="status">
-        <text variable="status" text-case="capitalize-first"/>
-      </else-if>
-      <else>
-        <text term="no date" form="short"/>
-      </else>
-    </choose>
-  </macro>
-  <macro name="date-in-text">
-    <choose>
-      <if variable="issued">
-        <group delimiter=" ">
-          <date variable="original-date" form="text" date-parts="year" prefix="[" suffix="]"/>
-          <date variable="issued">
-            <date-part name="year"/>
-          </date>
-        </group>
-      </if>
-      <else-if variable="accessed">
-        <date variable="accessed">
-          <date-part name="year"/>
-        </date>
-      </else-if>
-      <else-if variable="status">
-        <text variable="status"/>
-      </else-if>
-      <else>
-        <text term="no date" form="short"/>
-      </else>
     </choose>
   </macro>
   <macro name="day-month">
@@ -530,12 +486,6 @@
           <text variable="medium" text-case="capitalize-first"/>
         </group>
       </if>
-      <else-if type="patent">
-        <group delimiter=" " prefix=". ">
-          <text variable="authority"/>
-          <text variable="number"/>
-        </group>
-      </else-if>
       <else>
         <text variable="medium" text-case="capitalize-first" prefix=". "/>
       </else>
@@ -573,25 +523,6 @@
       <else-if type="article-newspaper article-magazine personal_communication" match="any">
         <text macro="day-month" prefix=", "/>
       </else-if>
-      <else-if type="patent">
-        <group delimiter=", " prefix=", ">
-          <group delimiter=" ">
-            <!--Needs Localization-->
-            <text value="filed"/>
-            <date variable="submitted" form="text"/>
-          </group>
-          <group delimiter=" ">
-            <choose>
-              <if variable="issued submitted" match="all">
-                <text term="and"/>
-              </if>
-            </choose>
-            <!--Needs Localization-->
-            <text value="issued"/>
-            <date variable="issued" form="text"/>
-          </group>
-        </group>
-      </else-if>
       <else>
         <group prefix=". " delimiter=", ">
           <choose>
@@ -607,21 +538,10 @@
   <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" givenname-disambiguation-rule="primary-name">
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=", ">
-        <choose>
-          <if variable="issued accessed" match="any">
-            <group delimiter=" ">
-              <text macro="contributors-short"/>
-              <text macro="date-in-text"/>
-            </group>
-          </if>
-          <!---comma before forthcoming and n.d.-->
-          <else>
-            <group delimiter=", ">
-              <text macro="contributors-short"/>
-              <text macro="date-in-text"/>
-            </group>
-          </else>
-        </choose>
+        <group delimiter=" ">
+          <text macro="contributors-short"/>
+          <text macro="date"/>
+        </group>
         <text macro="point-locators"/>
       </group>
     </layout>
@@ -630,7 +550,6 @@
     <sort>
       <key macro="contributors"/>
       <key variable="issued"/>
-      <key variable="title"/>
     </sort>
     <layout suffix=".">
       <group delimiter=". ">
@@ -650,7 +569,7 @@
       <text macro="issue"/>
       <text prefix="" macro="date"/> <!-- EO moved here from above -->
       <text macro="locators-article"/>
-      <text macro="access" prefix=". "/>
+      <text macro="access" prefix=". " />
     </layout>
   </bibliography>
 </style>
