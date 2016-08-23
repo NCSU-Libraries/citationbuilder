@@ -6,6 +6,7 @@
     padding-right: 0px;
 }
 #cite-text p{
+    font-size: 1rem;
     padding-top: 5px;
 }
 @media only screen and (min-device-width: 768px){
@@ -22,6 +23,7 @@
     }
 }
 #cite-style-text p{
+    font-size: 1rem;
     padding-top: 5px;
 }
 
