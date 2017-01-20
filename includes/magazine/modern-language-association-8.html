@@ -1,0 +1,116 @@
+<form class="citation-form" data-csl="modern-language-association-8">
+    <ul class="button-group unstyle-list citation">
+        <li><a class="tiny button disabled active" data-citation="print" href="#">in print</a></li>
+        <li><a class="tiny button disabled" data-citation="digital" href="#">digital</a></li>
+        <li><a class="tiny button disabled" data-citation="database" href="#">in a database</a></li>
+    </ul>
+    <input type="hidden" name="type" value="article-magazine" id="form-type" />
+
+    <div class="contributor-container">
+        <div class="row contributor">
+            <div class="columns medium-2 field print digital database">
+                <label for="author">Contributor
+                    <select name="contributor">
+                        <option value="author">Author</option>
+                        <option value="editor">Editor</option>
+                        <option value="translator">Translator</option>
+                    </select>
+                </label>
+            </div>
+            <div class="columns medium-4 field print digital database">
+                <label>First Name<input type="text" name="given" /></label>
+            </div>
+            <div class="columns medium-1 field print digital database">
+                <label>MI<input type="text" name="givenMiddle" /></label>
+            </div>
+            <div class="columns medium-4 last-name field print digital database">
+                <label>Last Name/Corp.<input type="text" name="family" /></label>
+            </div>
+            <div class="columns medium-1 field print digital database">
+                <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-1 right">
+            <div class="add-contributor" class=""><small><a href="#"><i class="fa fa-plus-square"></i></a></small></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print digital database">
+            <label for="title">Article Title<input type="text" name="title" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print digital database">
+            <label for="container-title">Magazine Title<input type="text" name="container-title" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-3 field print database">
+            <label for="issued-month">Date Published
+                <select name="issued-month">
+                    <option value="">month</option>
+                    <option value="month-01">January</option>
+                    <option value="month-02">February</option>
+                    <option value="month-03">March</option>
+                    <option value="month-04">April</option>
+                    <option value="month-05">May</option>
+                    <option value="month-06">June</option>
+                    <option value="month-07">July</option>
+                    <option value="month-08">August</option>
+                    <option value="month-09">September</option>
+                    <option value="month-10">October</option>
+                    <option value="month-11">November</option>
+                    <option value="month-12">December</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="columns medium-3 field print database">
+            <label for="issued-day">&nbsp;
+                <input type="text" name="issued-day" placeholder="dd" class="columns medium-6"/>
+            </label>
+        </div>
+
+        <div class="columns medium-3 field print database">
+            <label for="issued-yr">&nbsp;
+                <input type="text" name="issued-yr" placeholder="yyyy" class="columns medium-6"/>
+            </label>
+        </div>
+
+
+        <div class="columns medium-3 field print database left">
+            <label for="page">Pages<input type="text" name="page" placeholder="ex: 100-110" /></label>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field database">
+            <label for="archive_location">Database Title<input type="text" name="archive_location" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field digital database">
+            <label for="URL">Website<input type="text" name="URL" placeholder="website.com/article" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-3 field digital database input-append date">
+            <label for="issued">Date Published<input type="text" name="issued" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+        </div>
+    </div>
+
+    <div class="row" id="submit-area">
+        <div class="columns medium-2">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+</form>

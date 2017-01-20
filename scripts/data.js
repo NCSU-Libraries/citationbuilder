@@ -12,7 +12,6 @@ var data = {
     activateForm : function(form){
         data.form = form;
         data.formData = $(form).serializeArray();
-
         data.csl = $(form).data('csl');
         data.json = data.buildJson();
 
@@ -69,6 +68,7 @@ var data = {
             contribAry.push(contrib);
         })
 
+        n=0;
         for(var obj in data.formData) {
             json['Item-1']['id'] = 'Item-1';
             var name = data.formData[obj].name, val = data.formData[obj].value;
@@ -77,6 +77,23 @@ var data = {
                 json['Item-1'][name] = val;
 
                 // exception for fields who have mult values that need to be consolidated
+
+                if(obj >= 3){
+                    if(data.formData[obj-3].value == 'editor'){// for multiple editors
+                        given = data.formData[obj-2].value;
+                        middle = data.formData[obj-1].value;
+                        family = data.formData[obj].value;
+                        json['Item-1']['editor'][n] = {'given':given, 'family':family, 'givenMiddle':middle};
+                        n++;
+                    }
+                    if(data.formData[obj-3].value == 'translator'){// for multiple translators
+                        given = data.formData[obj-2].value;
+                        middle = data.formData[obj-1].value;
+                        family = data.formData[obj].value;
+                        json['Item-1']['translator'][n] = {'given':given, 'family':family, 'givenMiddle':middle};
+                        n++;
+                    }
+                }
                 if(name == 'year'){json['Item-1']['issued'] = {'date-parts' : [[val]]};}
                 if(name == 'accessed'){
                     var str = val.split('-');
@@ -85,7 +102,7 @@ var data = {
 
                 if(name == 'issued' && val != ''){
                     var str = val.split('-');
-                    json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0]]]};
+                    json['Item-1'][name] = {'date-parts' : [[str[2],str[1],str[0],'10:00']]};
                 }
 
                 // month/year inputs
@@ -93,6 +110,7 @@ var data = {
                     var year = $(data.form).find('input[name*="issued-yr"]').val();
                     var month = $(data.form).find('select[name*="issued-mo"]').val();
                     var day = $(data.form).find('input[name*="issued-dy"]').val();
+                    var time = $(data.form).find('input[name*="issued-time"]').val();
 
                     if(year){
                         dateObj[0] = year;
@@ -103,9 +121,27 @@ var data = {
                     if(day){
                         dateObj[2] = day;
                     }
+                    if(time){
+                        // dateObj[3] = time;
+                    }
 
                     json['Item-1']['issued'] = {'date-parts' : [dateObj]};
                 }
+                // if(name == 'issued-time'){
+                //     var hour = $(data.form).find('input[name*="issued-time"]').val();
+
+                //     if(hour){
+                //         dateObj[0] = hour;
+                //     }
+                //     if(month){
+                //         dateObj[1] = month;
+                //     }
+                //     if(day){
+                //         dateObj[2] = day;
+                //     }
+
+                //     json['Item-1']['issued'] = {'date-parts' : [dateObj]};
+                // }
 
             }
         }

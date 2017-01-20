@@ -229,16 +229,17 @@ var app = {
         var nowTemp = new Date();
         var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
-        $(app.form+' .fdatepicker').click(function(e){
+        $(app.form+' .fdatepicker').fdatepicker({
+            onRender: function (date) {
+                return date.valueOf() > now.valueOf() ? 'disabled' : '';
+            }
+        });
+        $(app.form+' .fdatepicker-time').fdatepicker({
+            format: 'hh:ii',
+            pickTime: true,
+            startView: 'day'
+        });
 
-            $(this).fdatepicker({
-                onRender: function (date) {
-                    return date.valueOf() > now.valueOf() ? 'disabled' : '';
-                }
-            });
-
-            $(this).fdatepicker('show');
-        })
     },
 
     logAnalytics : function(){
