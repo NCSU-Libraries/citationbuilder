@@ -16,7 +16,7 @@ ABOUT CITATION BUILDER
 Citation Builder is a web-based tool designed to quickly and easily generate citations for sources consulted during the research process. While powerful tools such as RefWorks, Zotero, and Endnote exist to generate citations, understanding how to use these tools can require an investment of time. Citation Builder is an attempt to provide a low-barrier method for users to generate citations for commonly consulted source media. The formats include:
 
     American Psychological Association 6th edition
-    Modern Language Association 7th edition
+    Modern Language Association 8th edition
     Chicago Manual of Style 16th edition (author-date)
     Council of Science Editors, Name-Year (author-date)
 
