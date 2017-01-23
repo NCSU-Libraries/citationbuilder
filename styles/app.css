@@ -97,6 +97,9 @@ a#clear-form{
     border-color: #ccc;
     color: #555;
 }
+input[type='text'],input[type='number']{
+    min-width: 30px;
+}
 @media only screen and (min-device-width: 768px){
     .last-name{
         padding-right: 0px;

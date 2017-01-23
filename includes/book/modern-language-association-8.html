@@ -1,0 +1,84 @@
+<form class="citation-form" data-csl="modern-language-association-8">
+    <ul class="button-group unstyle-list citation">
+        <li><a class="tiny button disabled active" data-citation="print" href="#">print</a></li>
+        <li><a class="tiny button disabled" data-citation="digital" href="#">digital</a></li>
+        <!-- <li><a class="tiny button disabled" data-citation="media" href="#">media (film/tv)</a></li> -->
+    </ul>
+    <input type="hidden" name="type" value="book" id="form-type" />
+
+    <div class="contributor-container">
+        <div class="row contributor">
+            <div class="columns medium-2 field print digital media">
+                <label for="author">Contributor
+                    <select name="contributor">
+                        <option value="author">Author</option>
+                        <option value="editor">Editor</option>
+                        <option value="translator">Translator</option>
+                    </select>
+                </label>
+            </div>
+            <div class="columns medium-4 field print digital media">
+                <label>First Name<input type="text" name="given" /></label>
+            </div>
+            <div class="columns medium-1 field print digital media">
+                <label>MI<input type="text" name="givenMiddle" /></label>
+            </div>
+            <div class="columns medium-4 last-name field print digital media">
+                <label>Last Name/Corp.<input type="text" name="family" /></label>
+            </div>
+            <div class="columns medium-1 field print digital media">
+                <div class="remove-contributor"><small><a href="#"><i class="fa fa-minus-square"></i></a></small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-1 right">
+            <div class="add-contributor" class=""><small><a href="#"><i class="fa fa-plus-square"></i></a></small></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field print digital media">
+            <label for="title">Title<input type="text" name="title" /></label>
+        </div>
+    </div>
+
+    <label for="publisher">Publication Info</label>
+    <div class="row">
+        <div class="columns medium-6 field print digital media">
+            <input type="text" name="publisher" placeholder="publisher" />
+        </div>
+<!--         <div class="columns medium-3 field print digital">
+            <label for="location"><input type="text" name="publisher-place" placeholder="location" /></label>
+        </div> -->
+        <div class="columns medium-3 field print digital left download media">
+            <label for="issued-yr"><input type="text" name="issued-yr" placeholder="year" /></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns medium-12 field digital">
+            <label for="archive_location">Website or Database Title<input type="text" name="archive_location" /></label>
+        </div>
+    </div>
+
+    <label for="URL" class="field download">Type of eBook</label>
+    <div class="row">
+        <div class="columns medium-12 field digital media">
+            <label for="URL" class="field digital">Website URL<input type="text" name="URL" placeholder="website.com/article" /></label>
+        </div>
+    </div>
+
+<!--     <div class="row">
+        <div class="columns medium-3 field digital left">
+            <label for="accessed">Date Accessed<input type="text" name="accessed" placeholder="dd-mm-yyyy" class="fdatepicker" data-date-format="dd-mm-yyyy" /></label>
+        </div>
+    </div> -->
+
+    <div class="row" id="submit-area">
+        <div class="columns medium-2">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+</form>

@@ -9,6 +9,7 @@
     <!--#include virtual="/sites/all/themes/ncsulib_foundation/templates/includes/head.html" -->
     <script type="text/javascript" src="./citeproc-js/xmldom.js"></script>
     <script type="text/javascript" src="./citeproc-js/citeproc.js"></script>
+    <script src="scripts/datepicker.js"></script>
     <script src="scripts/citation.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/data.js"></script>
@@ -35,7 +36,7 @@
 
                         <div id="form-container">
                             <?php
-                                $csl_array = array('apa','chicago-author-date','council-of-science-editors-author-date','modern-language-association');
+                                $csl_array = array('apa','chicago-author-date','council-of-science-editors-author-date','modern-language-association-8');
                                 $medium_array = array('book','chapter','magazine','newspaper','article-journal','website');
                                 foreach($medium_array as $med){
                                     print '<div class="form-parent" id="'.$med.'">';
