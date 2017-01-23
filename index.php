@@ -48,7 +48,7 @@
                                     print '</div>';
                                 }
                             ?>
-                            <p><small>Miss the old <a href="/citationbuilder/old/">Citation Builder?</a></small></p>
+                            <!-- <p><small>Miss the old <a href="/citationbuilder/old/">Citation Builder?</a></small></p> -->
                         </div>
 
 
