@@ -62,6 +62,7 @@
 
                         <ul>
                             <li>American Psychological Association 6th edition</li>
+                            <li>Modern Language Association 7th edition</li>
                             <li>Modern Language Association 8th edition</li>
                             <li>Chicago Manual of Style 16th edition (author-date)</li>
                             <li>Council of Science Editors, Name-Year (author-date)</li>
