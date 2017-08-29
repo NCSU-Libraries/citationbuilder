@@ -51,7 +51,7 @@ var cite = {
 	    var bib = bibResult[1].join('\n');
 
 	    if(bib.indexOf('CSL STYLE ERROR') > 0){
-	    	return "You literally entered nothing into the form.";
+	    	return "To complete your citation I'm going to need you to fill out at least one field.";
 	    } else{
 	    	return bib;
 	    }

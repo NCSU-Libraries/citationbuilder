@@ -61,8 +61,8 @@ var app = {
         $('.form-child').hide();
         $('#'+app.cite).show();
         $('.'+app.style).show();
-        app.form = '#'+app.cite+' .'+app.style;
 
+        app.form = '#'+app.cite+' .'+app.style;
         app.activateCitationButtons();
         app.getCitation();
         app.handleCitationFields();

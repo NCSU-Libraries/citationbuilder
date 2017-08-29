@@ -17,27 +17,19 @@ var data = {
 
         $('#citation-content').html(cite.init(data.json, data.csl));
         $('#citation-modal').foundation('reveal', 'open');
-        // data.selectText('csl-entry');
-    },
 
-    // selectText : function(element) {
-    //     var doc = document
-    //         , text = doc.getElementsByClassName(element)
-    //         , range, selection
-    //     ;
-    //     console.log(text)
-    //     if (doc.body.createTextRange) {
-    //         range = document.body.createTextRange();
-    //         range.moveToElementText(text);
-    //         range.select();
-    //     } else if (window.getSelection) {
-    //         selection = window.getSelection();
-    //         range = document.createRange();
-    //         range.selectNodeContents(text);
-    //         selection.removeAllRanges();
-    //         selection.addRange(range);
-    //     }
-    // },
+        // remove foundation's default click handler because it was closing
+        $( document ).off("click");
+
+
+        $('.close-reveal-modal').click(function(){
+            $('#citation-modal').foundation('reveal', 'close');
+        })
+        $('.reveal-modal-bg').click(function(){
+            $('#citation-modal').foundation('reveal', 'close');
+        })
+
+    },
 
     buildJson : function(){
 

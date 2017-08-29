@@ -36,7 +36,7 @@
 
                         <div id="form-container">
                             <?php
-                                $csl_array = array('apa','chicago-author-date','council-of-science-editors-author-date','modern-language-association-8');
+                                $csl_array = array('apa','chicago-author-date','council-of-science-editors-author-date','modern-language-association','modern-language-association-8');
                                 $medium_array = array('book','chapter','magazine','newspaper','article-journal','website');
                                 foreach($medium_array as $med){
                                     print '<div class="form-parent" id="'.$med.'">';
